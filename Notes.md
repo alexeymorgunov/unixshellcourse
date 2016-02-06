@@ -199,6 +199,9 @@ mouse$ #only at the end of line
 * *Single quotes* quote everything inside them as is, no need for escape characters.
 * *Backticks* work as command substitution.
 * *Double quotes* preserve everything except variables and backquoted expressions.
+* *Double parentheses* are used for arithmetic operations.
+* *Braces* are used for parameter expansion, and also to identify variables unambiguously.
+* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](#shell-scripting) for more examples.
 ```bash
 echo $HOME #what you expect, evaluates the variable
 echo \$HOME #just a string, escapes the variable
@@ -207,6 +210,8 @@ echo \\\$HOME #if you want both escaped
 echo '$HOME | ls' #as is
 echo `$HOME | ls` #command substitution, executes and then displays
 echo "$HOME | ls" #variable evaluated, then everything is displayed without execution
+echo $((42+42)) #dollar sign is needed to treat it as variable
+echo f{oo,ee,e}d #displays all possible variants
 ```
 
 Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
