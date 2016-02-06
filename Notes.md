@@ -17,7 +17,7 @@ Developing skills for coding in any language consists of the following component
 
 In this tutorial we focus on explaining the *Logic* component and on building some *Awareness* about existing commands and methods in Unix shell. Finally, we give some exercises for *Practice* and leave it up to you to familiarise yourself with how to search for answers if you get stuck.
 
-**If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section below and try your skills at it.
+**If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section and try your skills at it.
 
 ### Basics
 
@@ -55,6 +55,23 @@ rm [file] #delete file
 rmdir [directory] #delete directory
 ```
 Careful when using `rm` recursively (`rm -r`). It is better and safer to use `find` instead, e.g. to remove all files with `.pdf` as their extension in the current working directory: `find . -name '*.pdf' -delete`. (The star in `*.pdf` here means all files that end in `.pdf`.)
+
+File permissions:
+```bash
+chmod 755 [file] #rwx for owner, rx for group and world
+```
+
+This works by adding permission codes to make an octal:
+* 4 – read (r)
+* 2 – write (w)
+* 1 – execute (x)
+Specified for owner, group and world, in that order.
+
+There are alternative, non-octal options - see `man chmod`.
+
+Superuser - prefixing the commands with `sudo` gives superuser permissions and requires password input.
+
+![xkcd_sudo](http://imgs.xkcd.com/comics/sandwich.png)
 
 ### Working with text files
 
@@ -149,6 +166,8 @@ mouse$ #only at the end of line
 ```
 
 Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
+
+![xkcd_regexp](http://imgs.xkcd.com/comics/regular_expressions.png)
 
 ### License
 
