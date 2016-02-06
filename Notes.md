@@ -7,7 +7,7 @@
 
 ## Contents
 
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 2. [Basics](#Basics)
 3. [Working with text files](#Working with text files)
 4. [Redirection & Pipes](#Redirection & Pipes)
