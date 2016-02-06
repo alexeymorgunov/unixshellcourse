@@ -12,7 +12,12 @@ Unix shell is a command line interpreter that provides a user interface for dire
 Developing skills for coding in any language consists of the following components:
 * *Logic* - understanding the syntax, how commands and scripts are structured and how components fit together. This is something one has to learn.
 * *Awareness* - knowing what commands, methods and tricks exist and what they can be used for. This is like checking your inventory of LEGO bricks - you need to know what you have in order to start thinking how to put them together to build what you want.
-* *Google and [Stack Overflow](http://stackoverflow.com/)* - what coding really is about.
+* *Practice* - and a lot of practice. Learning how to combine the bricks together to solve increasingly more complex problems is best achieved through continuous practice.
+* *Google and [Stack Overflow](http://stackoverflow.com/)* - what coding really is about. It is likely that unless you are doing something very very novel, someone else has run into the same problem and has a solution. Find it and use it, don't reinvent the wheel. This is an important part of the learning and practice process.
+
+In this tutorial we focus on explaining the *Logic* component and on building some *Awareness* about existing commands and methods. Finally, we give some exercises for *Practice* and leave it up to you to familiarise yourself with how to search for answers if you get stuck.
+
+**If you have previous experience with Unix shell.** Skip to the *Exercises* section below and try your skills at it.
 
 ### License
 
