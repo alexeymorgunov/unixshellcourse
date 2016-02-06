@@ -17,7 +17,7 @@ Developing skills for coding in any language consists of the following component
 
 In this tutorial we focus on explaining the *Logic* component and on building some *Awareness* about existing commands and methods in Unix shell. Finally, we give some exercises for *Practice* and leave it up to you to familiarise yourself with how to search for answers if you get stuck.
 
-**If you have previous experience with Unix shell.** Skip to the *Exercises* section below and try your skills at it.
+**If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section below and try your skills at it.
 
 ### Basics
 
@@ -32,6 +32,8 @@ Very useful starting points:
 ```bash
 man [command] #manual entry for the command ('q' to exit)
 which [command] #locate the program aliased to the command
+whatis [command] #one-line description
+apropos [keyword] #match commands with keyword in their man pages
 ls #list files in the directory
 ls -l #long information
 ls -lh #human readable format
@@ -52,7 +54,7 @@ mv [file1] [file2] #move file1 to location file2, e.g. rename
 rm [file] #delete file
 rmdir [directory] #delete directory
 ```
-Careful when using `rm` recursively (`rm -r`) - it is better and safer to use `find` instead, e.g. to remove all files with `.pdf` as their extension in the current working directory: `find . -name '*.pdf' -delete`. (The star in `*.pdf` here means all files that end in `.pdf`.)
+Careful when using `rm` recursively (`rm -r`). It is better and safer to use `find` instead, e.g. to remove all files with `.pdf` as their extension in the current working directory: `find . -name '*.pdf' -delete`. (The star in `*.pdf` here means all files that end in `.pdf`.)
 
 ### Working with text files
 
@@ -67,6 +69,86 @@ tail -N [file] #display bottom N lines of file
 wc [file] #word, line, character and byte count
 ```
 
+Sorting:
+```bash
+sort [file] #sort alphabetically/numerically each line from file
+sort -u [file] #sort unique entries
+sort -r [file] #print reverse order
+uniq [file] #print only unique lines
+uniq -c [file] #show number of times the line occurs before each line
+```
+
+Operations on lines:
+```bash
+rev [file] #reverse the characters in each line of file
+cut -c2 [file] #cut 2nd character from each line
+cut -c3-5 [file] #cut 3rd, 4th and 5th characters
+cut -c3- [file] #cut from 3rd character until end of line
+cut -d':' -f2,5 [file] #cut the 2nd and 5th fields delimited by semicolons
+join [file1] [file2] #join corresponding columns into one
+paste [file] #same as `cat` without any options
+paste -d',' -s [file] #join all lines in file into one using the delimiter
+paste - - < [file] #paste the data in file into two columns
+paste -d',:' - - - < [file] #three columns, two different delimiters
+paste -d',' [file1] [file2] #join two files by columns, c.f. `join`
+paste -d'\n' [file1] [file2] #read lines in both files alternatively
+```
+
+`join` is a very useful tool - more tricks [here](http://www.albany.edu/~ig4895/join.htm).
+
+Comparisons:
+```bash
+comm [file1] [file2] #outputs 3 columns: lines unique to file1, to file2, common
+comm -12 [file1] [file2] #suppress output columns 1 and 2, i.e. show only common
+diff [file1] [file2] #shows per line changes needed to make file1 into file2
+sdiff [file1] [file2] #compare two files side-by-side
+```
+
+`diff` is another overloaded tool, check it out [here](http://www.computerhope.com/unix/udiff.htm).
+
+`grep`:
+```bash
+grep [string] [file] #print lines in file containing string
+grep 'multiple words' [file] #use quotes for phrases
+grep -i [string] [file] #case-insensitive
+grep -v [string] [file] #lines that DON'T match string
+grep -n [string] [file] #show line numbers
+grep -c [string] [file] #only total count of matching lines
+```
+
+
+### Redirection & Pipes
+
+To take keyboard input and put it into a file, we can use `cat > file1.txt`. Type as many lines as you like to put into the text file (press `<Enter>` to start a new line) and when done finish with `<CTRL+D>`.
+
+To load the contents of the file, use `cat file1.txt`. To append the contents, e.g. taking contents of a different file `file2.txt` and adding them to the end of `file1.txt`, use `cat file2.txt >> file1.txt`.
+
+To combine (i.e. to concatenate) two files, use `cat file1.txt file2.txt > long_file.txt`.
+
+N.B. `>` overwrites existing files, `>>` only appends to the end.
+
+To take input from `file1.txt`, sort it and output it as `file2.txt`:
+```bash
+sort < file1.txt > file2.txt #using redirection into command, then into file
+cat file1.txt | sort > file2.txt #using | to pipe output as next input
+```
+
+Using piping, many commands can be joined together, e.g.:
+```bash
+cat file1.txt | cut -d',' -f2 | sort -u | wc -l #number of unique entries in second column (as delimited by commas) of file1.txt
+```
+
+### Wildcards and Regular Expressions
+
+To match none or more characters in a file name, a wildcard `*.pdf` can be used, as seen above. Some more examples of wildcards:
+```bash
+*ouse #any number or none: matches GRouse, House, Mouse and ouse
+?ouse #only one character: matches House and Mouse
+^mouse #only at the beginning of line
+mouse$ #only at the end of line
+```
+
+Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
 
 ### License
 
