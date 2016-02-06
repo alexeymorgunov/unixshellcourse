@@ -11,7 +11,7 @@
 2. [Basics](#basics)
 3. [Working with text files](#working-with-text-files)
 4. [Redirection & Pipes](#redirection--pipes)
-5. [Wildcards and Regular Expressions](#wildcards-and-regular-expressions)
+5. [Wildcards, special syntax and Regular Expressions](#wildcards-special-syntax-and-regular-expressions)
 6. [Shell scripting](#shell-scripting)
 7. [Miscellaneous](#miscellaneous)
 
@@ -80,7 +80,7 @@ There are plenty more usage examples of `find` - see [here](http://alvinalexande
 Echo is a tool to print to standard output results of a command or just text:
 ```bash
 echo 'Hello World!' #prints text
-echo `ls` #prints the output of the command (that's backticks there)
+echo `ls` #command substitution: prints the output of the command (backticks!)
 echo $HOME #prints the value of the variable
 ```
 
@@ -185,7 +185,7 @@ cat file1.txt | cut -d',' -f2 | sort -u | wc -l #number of unique entries in sec
 ```
 
 ---
-### Wildcards and Regular Expressions
+### Wildcards, special syntax and Regular Expressions
 
 To match none or more characters in a file name, a wildcard `*.pdf` can be used, as seen above. Some more examples of wildcards:
 ```bash
@@ -193,6 +193,20 @@ To match none or more characters in a file name, a wildcard `*.pdf` can be used,
 ?ouse #only one character: matches House and Mouse
 ^mouse #only at the beginning of line
 mouse$ #only at the end of line
+```
+
+* *Backslash* works as an escape character:
+* *Single quotes* quote everything inside them as is, no need for escape characters.
+* *Backticks* work as command substitution.
+* *Double quotes* preserve everything except variables and backquoted expressions.
+```bash
+echo $HOME #what you expect, evaluates the variable
+echo \$HOME #just a string, escapes the variable
+echo \\$HOME #escapes the backslash, evaluates the variable
+echo \\\$HOME #if you want both escaped
+echo '$HOME | ls' #as is
+echo `$HOME | ls` #command substitution, executes and then displays
+echo "$HOME | ls" #variable evaluated, then everything is displayed without execution
 ```
 
 Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
@@ -231,11 +245,14 @@ cd ~/[folder]/bin #go to where the binaries usually are
 The following commands and tools are useful ins some specific cases, check out their usage by following the links!
 
 Downloading files:
-`wget` - see [here](http://www.computerhope.com/unix/wget.htm).
-`curl` - see [here](http://www.computerhope.com/unix/curl.htm).
+* `wget` - see [here](http://www.computerhope.com/unix/wget.htm).
+* `curl` - see [here](http://www.computerhope.com/unix/curl.htm).
 
 Checksum:
-`md5sum` - see [here](http://linux.101hacks.com/unix/md5sum/).
+* `md5sum` - see [here](http://linux.101hacks.com/unix/md5sum/).
+
+Calculator:
+* `bc` - e.g. `echo '57+43' | bc`, see [here](http://www.basicallytech.com/blog/archive/23/command-line-calculations-using-bc/).
 
 There are some other things you should definitely know about if you are going anywhere near programming:
 
