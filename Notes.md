@@ -28,6 +28,8 @@ Developing skills for coding in any language consists of the following component
 
 In this tutorial we focus on explaining the *Logic* component and on building some *Awareness* about existing commands and methods in Unix shell. Finally, we give some exercises for *Practice* and leave it up to you to familiarise yourself with how to search for answers if you get stuck.
 
+Important! There are many links to extra resources included in this tutorial. They are for extra information only.
+
 **If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section and try your skills at it.
 
 ---
@@ -238,6 +240,39 @@ Regular Expressions are sets of characters and/or metacharacters that match (or 
 
 This is where things get real. Shell can be used as a general purpose interpreted scripting language(-ish) with many of the associated features. It is especially powerful for processing text data and passing it between programs, as well as file handling. This it does easier and often faster (citation needed) than Python/Perl/Ruby equivalents.
 
+Shell scripts are usually stored as text files with `.sh` as the extension and starting with a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) consisting of `#!/bin/sh`.
+
+Variables are prefixed with a dollar sign when called, e.g. `$HOME` and assigned with a single equals sign, e.g. `my_variable=42`. To avoid ambiguity in scripts, it is often customary to surround variable names with braces, e.g. `${HOME}`. More on variables [here](http://steve-parker.org/sh/variables1.shtml).
+
+Some further useful things:
+```bash
+expr $x +1 #evaluate expression and print results
+read [variable] #interactively supply value
+printf "%s\t%d\t%f\t%.1f\n" "${string}" "${integer}" "${float}" "${float.0}" #prints tab separated variables (note the specifiers) and a new line character
+```
+
+Conditional statements:
+```bash
+if  [ condition ]; then
+ echo "Something"
+ elif [ another_condition ]; then
+   echo "Something else"
+ else
+   echo "None of the above"
+fi
+```
+
+While loops:
+```bash
+while [ condition ]; do
+  echo "Something"
+done
+```
+
+For most modern shells, the use of double brackets is recommended instead of single brackets in conditional statements.
+
+There exist too many comparison operators to list here. Use [this resource](http://www.tldp.org/LDP/abs/html/tests.html) for reference on how to build up conditional statements.
+
 ---
 ### Miscellaneous
 
@@ -288,6 +323,14 @@ all:
 	git pull
 	git push
 ```
+
+Some excellent resources for much more in-depth shell:
+* [Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/index.html).
+* [Short-ish tutorial in bash scripting](http://steve-parker.org/sh/sh.shtml).
+* [Linux Shell Scripting Tutorial (LSST) v1.05r3](http://www.freeos.com/guides/lsst/).
+* [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page).
+
+This tutorial was written in `Markdown`, which is also a useful thing to learn. Start [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 ### License
