@@ -49,14 +49,14 @@ echo "#3 ${ice3}"
 ```  
 
 2. Write a shell script that allows a user to enter any existing file name. The program should then copy file to /tmp directory. An advanced solution would check whether the file exists.
-```bash
+  ```bash
 #!/bin/sh
 # Version 1 (blind copy)
 read -p "Enter any file name : " filename
 cp $filename /tmp
-```
-OR
-```bash
+```  
+  OR  
+  ```bash
 #!/bin/sh
 # Version 2 (first check for $filename and than copy it, else display an error message)
 read -p "Enter any file name : " filename
@@ -68,10 +68,10 @@ then
 else
 	echo "$0: $filename not found."
 fi
-```
+```  
 
 3. Write a simple shell script where the user enters a pizza parlor bill total. Your script should then display a 10 percent tip.
-```bash
+  ```bash
 #!/bin/sh
 clear
 echo "*************************"
@@ -89,19 +89,19 @@ echo "Tip (10%)  : ${tip}"
 echo "--------------------------"
 echo "Total      : ${total}"
 echo "--------------------------"
-```
+```  
 
 4. Write a simple calculator program that allows user to enter two numeric values and operand. The program should then print out the result of the operation on the two numbers. Make sure it works according to entered operand.
-```bash
+  ```bash
 #!/bin/sh
 read -p "Enter two values : " a b
 read -p "Enter operand ( +, -, /, *) : " op
 ans=$(( $a $op $b ))
 echo "$a $op $b = $ans"
-```
+```  
 
 5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of line and symbols. The advanced version would also count the number of vowels.
-```bash
+  ```bash
 #!/bin/sh
 file=$1
 v=0
@@ -129,10 +129,10 @@ echo "Vowels : $v"
 echo "Characters : $(cat $file | wc -c)"
 echo "Blank lines : $(grep  -c '^$' $file)"
 echo "Lines : $(cat $file|wc -l )"
-```
+```  
 
 6. Write a shell script that, given a file name as the argument will write the even numbered line to a file with name `evenfile` and odd numbered lines in a text file called `oddfile`.
-```bash
+  ```bash
 #!/bin/sh
 file=$1
 counter=0
@@ -161,10 +161,10 @@ do
 	fi
 
 done < $file
-```
+```  
 
 7. Write a shell program to read a number (such as 123) and find the sum of digits (1+2+3=6).
-```bash
+  ```bash
 #!/bin/sh
 
 #store the no
@@ -187,10 +187,10 @@ do
 done
 
 echo "Sum of digits = $sum"
-```
+```  
 
 8. Write a shell program to read two numbers and display all the odd numbers between those two numbers.
-```bash
+  ```bash
 #!/bin/bash
 # Shell program to read two numbers and display all the odd
 
@@ -214,7 +214,7 @@ then
 else
   echo "$n2 must be greater than $n1, try again..."
 fi
-```
+```  
 
 
 ---
