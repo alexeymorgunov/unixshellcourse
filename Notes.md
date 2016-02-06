@@ -201,7 +201,7 @@ mouse$ #only at the end of line
 * *Double quotes* preserve everything except variables and backquoted expressions.
 * *Double parentheses* are used for arithmetic operations.
 * *Braces* are used for parameter expansion, and also to identify variables unambiguously.
-* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](#shell-scripting) for more examples.
+* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
 ```bash
 echo $HOME #what you expect, evaluates the variable
 echo \$HOME #just a string, escapes the variable
