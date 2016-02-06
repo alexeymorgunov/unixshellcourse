@@ -15,6 +15,7 @@
 6. [Shell scripting](#shell-scripting)
 7. [Miscellaneous](#miscellaneous)
 
+---
 ### Introduction
 
 Unix shell is a command line interpreter that provides a user interface for directing the operation of the computer by entering commands as text for a command line interpreter to execute, or by creating text scripts of one or more such commands. In plain English, it is a powerful way of telling your computer what to do. You can read more about the history of Unix shell [here](http://www.softpanorama.org/People/Shell_giants/introduction.shtml "Unix shell history").
@@ -29,6 +30,7 @@ In this tutorial we focus on explaining the *Logic* component and on building so
 
 **If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section and try your skills at it.
 
+---
 ### Basics
 
 The syntax of commands:
