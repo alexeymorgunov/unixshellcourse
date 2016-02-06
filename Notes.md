@@ -1,4 +1,4 @@
-# Introduction to Unix shell
+# Introduction to Unix shell - NOTES
 
 * 2015/16 Part III Systems Biology SEB module
 * 10 Feb 2016, 10:00-13:00
@@ -244,7 +244,7 @@ Shell scripts are usually stored as text files with `.sh` as the extension and s
 
 Variables are prefixed with a dollar sign when called, e.g. `$HOME` and assigned with a single equals sign, e.g. `my_variable=42`. To avoid ambiguity in scripts, it is often customary to surround variable names with braces, e.g. `${HOME}`. More on variables [here](http://steve-parker.org/sh/variables1.shtml).
 
-Conditional statements:
+**Conditional statements**:
 ```bash
 if  [ condition ]; then
  echo "Something"
@@ -266,7 +266,7 @@ fi
 
 Note that in the above example, special variable `$1` refers to the first argument supplied when running the script. Save the script to a file named `my_script.sh` and run it using the command `./my_script.sh [number]`.
 
-Case statements:
+**Case statements**:
 ```bash
 case $variable in
   "pattern1") echo "pattern1";;
@@ -288,7 +288,7 @@ case $rental in
 esac
 ```
 
-While loops:
+**While loops**:
 ```bash
 while [ condition ]; do
   echo "Something"
@@ -306,7 +306,7 @@ do
 done
 ```
 
-For loops:
+**For loops**:
 ```bash
 for $variable in {list}; do
   echo "Something"
