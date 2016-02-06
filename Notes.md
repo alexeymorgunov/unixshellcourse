@@ -5,6 +5,16 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Avazeh Ghanbarian, Alexey Morgunov
 
+## Contents
+
+1. [Introduction](#Introduction)
+2. [Basics](#Basics)
+3. [Working with text files](#Working with text files)
+4. [Redirection & Pipes](#Redirection & Pipes)
+5. [Wildcards and Regular Expressions](#Wildcards and Regular Expressions)
+6. [Shell scripting](#Shell scripting)
+7. [Miscellaneous](#Miscellaneous)
+
 ### Introduction
 
 Unix shell is a command line interpreter that provides a user interface for directing the operation of the computer by entering commands as text for a command line interpreter to execute, or by creating text scripts of one or more such commands. In plain English, it is a powerful way of telling your computer what to do. You can read more about the history of Unix shell [here](http://www.softpanorama.org/People/Shell_giants/introduction.shtml "Unix shell history").
@@ -34,6 +44,7 @@ man [command] #manual entry for the command ('q' to exit)
 which [command] #locate the program aliased to the command
 whatis [command] #one-line description
 apropos [keyword] #match commands with keyword in their man pages
+file [file] #reports the type of data contained in file
 ls #list files in the directory
 ls -l #long information
 ls -lh #human readable format
@@ -53,8 +64,23 @@ cp [file] . #copy file from its location to working directory
 mv [file1] [file2] #move file1 to location file2, e.g. rename
 rm [file] #delete file
 rmdir [directory] #delete directory
+ln -s [file] [link] #create symbolic link to file
+touch [file] #create file or update timestamp of file
 ```
 Careful when using `rm` recursively (`rm -r`). It is better and safer to use `find` instead, e.g. to remove all files with `.pdf` as their extension in the current working directory: `find . -name '*.pdf' -delete`. (The star in `*.pdf` here means all files that end in `.pdf`.)
+
+Searching for files:
+```bash
+find . -name file.txt -type f -print #find in current directory by name and type (file), print path to file
+```
+There are plenty more usage examples of `find` - see [here](http://alvinalexander.com/unix/edu/examples/find.shtml).
+
+Echo is a tool to print to standard output results of a command or just text:
+```bash
+echo 'Hello World!' #prints text
+echo `ls` #prints the output of the command (that's backticks there)
+echo $HOME #prints the value of the variable
+```
 
 File permissions:
 ```bash
@@ -133,7 +159,6 @@ grep -n [string] [file] #show line numbers
 grep -c [string] [file] #only total count of matching lines
 ```
 
-
 ### Redirection & Pipes
 
 To take keyboard input and put it into a file, we can use `cat > file1.txt`. Type as many lines as you like to put into the text file (press `<Enter>` to start a new line) and when done finish with `<CTRL+D>`.
@@ -168,6 +193,42 @@ mouse$ #only at the end of line
 Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
 
 ![xkcd_regexp](http://imgs.xkcd.com/comics/regular_expressions.png)
+
+### Shell scripting
+
+This is where things get real. Shell can be used as a general purpose interpreted scripting language(-ish) with many of the associated features. It is especially powerful for processing text data and passing it between programs, as well as file handling. This it does easier and often faster (citation needed) than Python/Perl/Ruby equivalents.
+
+### Miscellaneous
+
+Compressing files:
+```bash
+gzip [file] #creates a .gz archive
+gunzip [archive] #unpacks a .gz archive
+zcat [archive] #reads a .gz archive without unpacking
+tar -cf [archive] [file1] [file2] #create a tarball
+tar -xf [archive] #extract the tarball
+```
+
+Compiling and running software packages:
+```bash
+tar -xf [archive] #unpack the archive
+cd [folder] #enter the folder (if necessary)
+./configure --prefix=$HOME/[folder] #create the Makefile and configures installation path
+make #build the package
+make check #optional: check it compiled correctly
+make install #install the package
+cd ~/[folder]/bin #go to where the binaries usually are
+./[binary] #run the program
+```
+
+The following commands are useful ins some specific cases, check out their usage by following the links!
+
+Downloading files:
+`wget` - see [here](http://www.computerhope.com/unix/wget.htm).
+`curl` - see [here](http://www.computerhope.com/unix/curl.htm).
+
+Checksum:
+`md5sum` - see [here](http://linux.101hacks.com/unix/md5sum/).
 
 ### License
 
