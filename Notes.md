@@ -8,12 +8,12 @@
 ## Contents
 
 1. [Introduction](#introduction)
-2. [Basics](#Basics)
-3. [Working with text files](#Working with text files)
-4. [Redirection & Pipes](#Redirection & Pipes)
-5. [Wildcards and Regular Expressions](#Wildcards and Regular Expressions)
-6. [Shell scripting](#Shell scripting)
-7. [Miscellaneous](#Miscellaneous)
+2. [Basics](#basics)
+3. [Working with text files](#working-with-text-files)
+4. [Redirection & Pipes](#redirection--pipes)
+5. [Wildcards and Regular Expressions](#wildcards-and-regular-expressions)
+6. [Shell scripting](#shell-scripting)
+7. [Miscellaneous](#miscellaneous)
 
 ### Introduction
 
