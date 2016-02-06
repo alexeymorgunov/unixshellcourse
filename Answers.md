@@ -8,6 +8,7 @@
 ## Contents
 
 1. [One-liners](#one-liners)
+2. [Longer scripts](#longer-scripts)
 
 ---
 ### One-liners
@@ -35,17 +36,17 @@ rmdir tmp/foo
 ```
 
 ---
-### Short scripts
+### Longer scripts
 
 1. Write a shell script that allows a user to enter his or her top three ice cream flavors. Your script should then print out the name of all three flavors.
-```bash
+  ```bash
 #!/bin/sh
 read -p "Enter your three ice cream flavors : " ice1 ice2 ice3
 echo "Thanks $USER!"
 echo "1# ${ice1}"
 echo "2# ${ice2}"
 echo "#3 ${ice3}"
-```
+```  
 
 2. Write a shell script that allows a user to enter any existing file name. The program should then copy file to /tmp directory. An advanced solution would check whether the file exists.
 ```bash
@@ -99,7 +100,7 @@ ans=$(( $a $op $b ))
 echo "$a $op $b = $ans"
 ```
 
-5. Write a shell script that, given a file name as the argument will count vowels, blank spaces, characters, number of line and symbols.
+5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of line and symbols. The advanced version would also count the number of vowels.
 ```bash
 #!/bin/sh
 file=$1
@@ -116,6 +117,7 @@ then
 	exit 2
 fi
 
+#advanced starts
 while read -n 1 c
 do
   l=$(echo $c | tr [:upper:] [:lower:])
@@ -123,6 +125,7 @@ do
 done < $file
 
 echo "Vowels : $v"
+#advanced ends
 echo "Characters : $(cat $file | wc -c)"
 echo "Blank lines : $(grep  -c '^$' $file)"
 echo "Lines : $(cat $file|wc -l )"
@@ -220,4 +223,4 @@ fi
 Many of the exercises are taken from [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page) under a CC-BY-NC-SA license.
 
 This material is released under a
-[CC-BY-SA license](https://creativecommons.org/licenses/by-sa/4.0/) ![license](https://licensebuttons.net/l/by-sa/3.0/88x31.png).
+[CC-BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/) ![license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png).

@@ -24,4 +24,4 @@ Answers to these questions will be made available [here](Answers.md).
 Many of the exercises are taken from [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page) under a CC-BY-NC-SA license.
 
 This material is released under a
-[CC-BY-SA license](https://creativecommons.org/licenses/by-sa/4.0/) ![license](https://licensebuttons.net/l/by-sa/3.0/88x31.png).
+[CC-BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/) ![license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png).
