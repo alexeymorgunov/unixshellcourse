@@ -101,6 +101,7 @@ Superuser - prefixing the commands with `sudo` gives superuser permissions and r
 
 ![xkcd_sudo](http://imgs.xkcd.com/comics/sandwich.png)
 
+---
 ### Working with text files
 
 Viewing file contents:
@@ -161,6 +162,7 @@ grep -n [string] [file] #show line numbers
 grep -c [string] [file] #only total count of matching lines
 ```
 
+---
 ### Redirection & Pipes
 
 To take keyboard input and put it into a file, we can use `cat > file1.txt`. Type as many lines as you like to put into the text file (press `<Enter>` to start a new line) and when done finish with `<CTRL+D>`.
@@ -182,6 +184,7 @@ Using piping, many commands can be joined together, e.g.:
 cat file1.txt | cut -d',' -f2 | sort -u | wc -l #number of unique entries in second column (as delimited by commas) of file1.txt
 ```
 
+---
 ### Wildcards and Regular Expressions
 
 To match none or more characters in a file name, a wildcard `*.pdf` can be used, as seen above. Some more examples of wildcards:
@@ -196,10 +199,12 @@ Regular Expressions are sets of characters and/or metacharacters that match (or 
 
 ![xkcd_regexp](http://imgs.xkcd.com/comics/regular_expressions.png)
 
+---
 ### Shell scripting
 
 This is where things get real. Shell can be used as a general purpose interpreted scripting language(-ish) with many of the associated features. It is especially powerful for processing text data and passing it between programs, as well as file handling. This it does easier and often faster (citation needed) than Python/Perl/Ruby equivalents.
 
+---
 ### Miscellaneous
 
 Compressing files:
@@ -223,7 +228,7 @@ cd ~/[folder]/bin #go to where the binaries usually are
 ./[binary] #run the program
 ```
 
-The following commands are useful ins some specific cases, check out their usage by following the links!
+The following commands and tools are useful ins some specific cases, check out their usage by following the links!
 
 Downloading files:
 `wget` - see [here](http://www.computerhope.com/unix/wget.htm).
@@ -232,6 +237,22 @@ Downloading files:
 Checksum:
 `md5sum` - see [here](http://linux.101hacks.com/unix/md5sum/).
 
+There are some other things you should definitely know about if you are going anywhere near programming:
+
+**Git and GitHub** allow version tracking and collaborative development. Don't worry, [nobody understands it](http://xkcd.com/1597/). But it is still incredibly useful. Start [here](https://try.github.io/levels/1/challenges/1).
+
+**Make** is a peculiar little tool that is worth understanding as it can save lots of time and pain by automating very tedious tasks. Check out the [shorter](http://mrbook.org/blog/tutorials/make/) and [longer](http://www.tutorialspoint.com/makefile/) tutorials. A good example of what it can do is to automate git processes for a repository to one command `make all`:
+```bash
+.PHONY: all
+
+all:
+	git add --all
+	git commit -a -m "pushed through make"
+	git pull
+	git push
+```
+
+---
 ### License
 
 This material is released under a
