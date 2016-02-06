@@ -162,6 +162,19 @@ grep -n [string] [file] #show line numbers
 grep -c [string] [file] #only total count of matching lines
 ```
 
+`sed`:
+```bash
+sed 's/foo/bar/g' #replaces all instances of 'foo' with 'bar'
+```
+This is only the simplest and arguably the most useful usage case. There is much, much more to `sed`, start [here](https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux) and [here](http://www.thegeekstuff.com/tag/sed-tips-and-tricks/).
+
+`awk`:
+```bash
+awk '{print $2,$5;}' [file] #print 2nd and 5th columns from file
+awk 'BEGIN { Actions at the start ;} { Actions for every line ;} END { Actions in the end ;}' [file] #do something, then act on every line of the file, then do something else
+```
+`awk` has been called a language within a language. It has a set of useful inbuilt variables and it is very powerful. See more [here](http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/). It can even do its own [control flow](http://www.thegeekstuff.com/2010/02/unix-awk-do-while-for-loops/).
+
 ---
 ### Redirection & Pipes
 
@@ -200,7 +213,7 @@ mouse$ #only at the end of line
 * *Backticks* work as command substitution.
 * *Double quotes* preserve everything except variables and backquoted expressions.
 * *Double parentheses* are used for arithmetic operations.
-* *Braces* are used for parameter expansion, and also to identify variables unambiguously.
+* *Braces* are used for parameter expansion, and also to identify variables unambiguously (among other things).
 * *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
 ```bash
 echo $HOME #what you expect, evaluates the variable
@@ -213,6 +226,8 @@ echo "$HOME | ls" #variable evaluated, then everything is displayed without exec
 echo $((42+42)) #dollar sign is needed to treat it as variable
 echo f{oo,ee,e}d #displays all possible variants
 ```
+
+The `$IFS` (Internal Field Separator) variable is very important as it determines how shell does word splitting. More info [here](http://unix.stackexchange.com/questions/184863/what-is-the-meaning-of-ifs-n-in-bash-scripting).
 
 Regular Expressions are sets of characters and/or metacharacters that match (or specify) patterns. It is a world of both wonder and pain. For a brief introduction, if you dare, see [here](http://www.tldp.org/LDP/abs/html/x17129.html).
 
