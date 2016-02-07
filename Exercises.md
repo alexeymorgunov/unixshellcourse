@@ -5,18 +5,6 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Avazeh Ghanbarian, Alexey Morgunov
 
-## Contents
-
-1. [One-liners](#one-liners)
-
-Answers to these questions will be made available [here](Answers.md).
-
----
-### One-liners
-
-1. Write a command to list details of all files ending in `.py` in reverse time order.
-2. Write a command to delete 3 files called file1.txt, file2.txt, and data1.txt.
-
 
 ---
 ### License

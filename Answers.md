@@ -5,38 +5,8 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Avazeh Ghanbarian, Alexey Morgunov
 
-## Contents
-
-1. [One-liners](#one-liners)
-2. [Longer scripts](#longer-scripts)
-
 ---
-### One-liners
-
-1. Write a command to list details of all files ending in `.py` in reverse time order.
-2. Write a command to delete 3 files called file1.txt, file2.txt, and data1.txt.
-3. Write a command to creates a new sub-directory called 'foo' in /tmp.
-4. Navigate to the new 'foo' directory.
-
-5. Write a command to delete the directory called 'foo' above.
-
-```bash
-#1
-ls -r *.py
-#2
-rm file1.txt file2.txt data1.txt #or
-rm file{1,2}.txt data1.txt
-#3
-mkdir tmp/foo
-#4
-cd /tmp/foo
-#
-rmdir tmp/foo
-
-```
-
----
-### Longer scripts
+### Exercises
 
 1. Write a shell script that allows a user to enter his or her top three ice cream flavors. Your script should then print out the name of all three flavors.
   ```bash
@@ -215,7 +185,6 @@ else
   echo "$n2 must be greater than $n1, try again..."
 fi
 ```  
-
 
 ---
 ### License
