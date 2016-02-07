@@ -1,4 +1,4 @@
-# Introduction to Unix shell - EXERCISES
+# Introduction to Unix shell - ANSWERS TO EXERCISES
 
 * 2015/16 Part III Systems Biology SEB module
 * 10 Feb 2016, 10:00-13:00
@@ -6,7 +6,7 @@
 * Avazeh Ghanbarian, Alexey Morgunov
 
 ---
-### Exercises
+### Answers to exercises
 
 1. Write a shell script that allows a user to enter his or her top three ice cream flavors. Your script should then print out the name of all three flavors.
   ```bash
@@ -15,7 +15,7 @@ read -p "Enter your three ice cream flavors : " ice1 ice2 ice3
 echo "Thanks $USER!"
 echo "1# ${ice1}"
 echo "2# ${ice2}"
-echo "#3 ${ice3}"
+echo "3# ${ice3}"
 ```  
 
 2. Write a shell script that allows a user to enter any existing file name. The program should then copy file to /tmp directory. An advanced solution would check whether the file exists.
@@ -186,7 +186,7 @@ else
 fi
 ```  
 
-9. Load the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text) and output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
+9. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
   ```bash
 tr -sc "A-Za-z\'" '\n' < shakespeare.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -k 1n
 ```  
@@ -203,6 +203,8 @@ tail -n +3 sh.words > sh.thirdwords
 paste sh.words sh.nextwords sh.thirdwords > sh.trigrams
 cat sh.trigrams | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -k 1n
 ```  
+
+  Yeah, the file isn't filtered for the copyright notice. Can you do that?  
 
 ---
 ### License
