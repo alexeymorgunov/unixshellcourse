@@ -186,7 +186,7 @@ else
 fi
 ```  
 
-9. Load the [`shakespeare.txt`](#./exercises/shakespeare.txt) file (all works of Shakespeare as text) and output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
+9. Load the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text) and output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
   ```bash
 tr -sc "A-Za-z\'" '\n' < shakespeare.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -k 1n
 ```  
