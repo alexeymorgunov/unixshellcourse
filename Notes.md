@@ -178,7 +178,7 @@ awk 'BEGIN { Actions at the start ;} { Actions for every line ;} END { Actions i
 ```
 `awk` has been called a language within a language. It has a set of useful inbuilt variables and it is very powerful. See more [here](http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/). It can even do its own [control flow](http://www.thegeekstuff.com/2010/02/unix-awk-do-while-for-loops/).
 
-There are some `awk` specific exercises [here](Exercises.md/exercises---awk)
+There are some `awk` specific exercises [here](Exercises.md#exercises---awk)
 
 ---
 ### Redirection & Pipes
