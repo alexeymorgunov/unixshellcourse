@@ -7,8 +7,8 @@
 
 ## Contents
 
-1. [Awk](#exercises-awk)
-2. [Shell scripting](#exercises-shell-scripting)
+1. [Awk](#exercises---awk)
+2. [Shell scripting](#exercises-shell---scripting)
 
 ---
 ### Exercises - Awk
