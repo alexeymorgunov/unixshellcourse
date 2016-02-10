@@ -211,7 +211,7 @@ To match none or more characters in a file name, a wildcard `*.pdf` can be used,
 mouse$ #only at the end of line
 ```
 
-* *Backslash* works as an escape character:
+* *Backslash* works as an escape character.
 * *Single quotes* quote everything inside them as is, no need for escape characters.
 * *Backticks* work as command substitution.
 * *Double quotes* preserve everything except variables and backquoted expressions.

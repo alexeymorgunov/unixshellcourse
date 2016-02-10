@@ -5,8 +5,24 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Avazeh Ghanbarian, Alexey Morgunov
 
+## Contents
+
+1. [Awk](#exercises-awk)
+2. [Shell scripting](#exercises-shell-scripting)
+
 ---
-### Exercises
+### Exercises - Awk
+
+1. How many genes are in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
+2. How many transcripts your favourite gene has, e.g. ENSG00000001461?
+3. How many exons?
+4. Which exon is the longest?
+5. Using the annotation file, print odd lines.
+6. Make a file of the transcriptIDs annotated by Havana.
+7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
+
+---
+### Exercises - Shell scripting
 
 1. Write a shell script that allows a user to enter his or her top three ice cream flavors. Your script should then print out the name of all three flavors.
 2. Write a shell script that allows a user to enter any existing file name. The program should then copy file to /tmp directory. An advanced solution would check whether the file exists.
