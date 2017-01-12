@@ -1,9 +1,28 @@
-# Introduction to Unix shell
+# Unix shell course
 
-* 2015/16 Part III Systems Biology SEB module
-* 10 Feb 2016, 10:00-13:00
+*Bioinformatics students* - please follow the links for the first part below. You
+may also be interested in checking out the second part on your own for more
+advanced topics in Unix shell.
+
+*Systems Biology students* - please follow the links for the second part below.
+The first part may be useful to you as a reference for more basic functions
+that you should be already familiar with.
+
+---
+## Introduction to Unix shell
+
+* 2016/17 Part II BBS Bioinformatics
+* 16 Jan 2016, 15:00-17:00
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Avazeh Ghanbarian, Alexey Morgunov
+* Alexey Morgunov
+
+---
+## More advanced Unix shell
+
+* 2016/17 Part III Systems Biology SEB module
+* 8 Feb 2016, 10:00-13:00
+* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
+* Alexey Morgunov
 
 Begin here: [Notes](Notes.md).
 
