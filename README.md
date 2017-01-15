@@ -12,7 +12,7 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Alexey Morgunov
 
-Begin here: [Notes](Notes.md).
+Begin here: [Notes](Notes1.md).
 
 [Exercises](Exercises.md).
 
@@ -26,11 +26,7 @@ Begin here: [Notes](Notes.md).
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Alexey Morgunov
 
-Begin here: [Notes](Notes.md).
-
-[Exercises](Exercises.md).
-
-[Answers](Answers.md) will be available at the end of the course here.
+Work in progress, please check back later!
 
 
 
