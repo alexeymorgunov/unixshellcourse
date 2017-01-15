@@ -14,9 +14,9 @@
 
 Begin here: [Notes](Notes1.md).
 
-[Exercises](Exercises.md).
+[Exercises](Exercises1.md).
 
-[Answers](Answers.md) will be available at the end of the course here.
+[Answers](Answers1.md) will be available at the end of the course here.
 
 ---
 ## More advanced Unix shell
