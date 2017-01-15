@@ -1,12 +1,8 @@
 # Unix shell course
 
-*Bioinformatics students* - please follow the links for the first part below. You
-may also be interested in checking out the second part on your own for more
-advanced topics in Unix shell.
+*Bioinformatics students* - please follow the links for the first part below. You may also be interested in checking out the second part on your own for more advanced topics in Unix shell.
 
-*Systems Biology students* - please follow the links for the second part below.
-The first part may be useful to you as a reference for more basic functions
-that you should be already familiar with.
+*Systems Biology students* - please follow the links for the second part below. The first part may be useful to you as a reference for more basic functions that you should be already familiar with.
 
 ---
 ## Introduction to Unix shell
@@ -15,6 +11,12 @@ that you should be already familiar with.
 * 16 Jan 2016, 15:00-17:00
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Alexey Morgunov
+
+Begin here: [Notes](Notes.md).
+
+[Exercises](Exercises.md).
+
+[Answers](Answers.md) will be available at the end of the course here.
 
 ---
 ## More advanced Unix shell
