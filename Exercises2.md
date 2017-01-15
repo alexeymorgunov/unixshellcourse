@@ -1,4 +1,4 @@
-# More advanced Unix shell - NOTES
+# More advanced Unix shell - EXERCISES
 
 * 2016/17 Part III Systems Biology SEB module
 * 8 Feb 2016, 10:00-13:00
@@ -7,13 +7,13 @@
 
 ## Contents
 
-1. [Introduction](#introduction)
-
+1. [Awk](#exercises---awk)
+2. [Shell scripting](#exercises---shell-scripting)
 
 ---
-### Introduction
+### Exercises - Awk
 
-You may want to refresh some basics of Unix shell by referring to my introductory notes [here](Notes1.md).
+
 
 ---
 ### License
