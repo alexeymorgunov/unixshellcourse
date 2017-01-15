@@ -210,7 +210,7 @@ mouse$ #only at the end of line
 * *Double quotes* preserve everything except variables and backquoted expressions.
 * *Double parentheses* are used for arithmetic operations.
 * *Braces* are used for parameter expansion, and also to identify variables unambiguously (among other things).
-* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
+* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](Notes2.md#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
 ```bash
 echo $HOME #what you expect, evaluates the variable
 echo \$HOME #just a string, escapes the variable
@@ -264,29 +264,6 @@ Checksum:
 
 Calculator:
 * `bc` - e.g. `echo '57+43' | bc`, see [here](http://www.basicallytech.com/blog/archive/23/command-line-calculations-using-bc/).
-
-There are some other things you should definitely know about if you are going anywhere near programming:
-
-**Git and GitHub** allow version tracking and collaborative development. Don't worry, [nobody understands it](http://xkcd.com/1597/). But it is still incredibly useful. Start [here](https://try.github.io/levels/1/challenges/1) and [here](https://guides.github.com/).
-
-**Make** is a peculiar little tool that is worth understanding as it can save lots of time and pain by automating very tedious tasks. Check out the [shorter](http://mrbook.org/blog/tutorials/make/) and [longer](http://www.tutorialspoint.com/makefile/) tutorials. A good example of what it can do is to automate git processes for a repository to one command `make all` if the following is saved in the `Makefile`:
-```bash
-.PHONY: all
-
-all:
-	git add --all
-	git commit -a -m "pushed through make"
-	git pull
-	git push
-```
-
-Some excellent resources for much more in-depth shell:
-* [Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/index.html).
-* [Short-ish tutorial in bash scripting](http://steve-parker.org/sh/sh.shtml).
-* [Linux Shell Scripting Tutorial (LSST) v1.05r3](http://www.freeos.com/guides/lsst/).
-* [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page).
-
-This tutorial was written in `Markdown`, which is also a useful thing to learn. Start [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ---
 ### License

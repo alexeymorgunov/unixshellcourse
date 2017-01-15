@@ -7,19 +7,8 @@
 
 ## Contents
 
-1. [Awk](#exercises---awk)
-2. [Shell scripting](#exercises---shell-scripting)
-
----
-### Exercises - Awk
-
-1. How many genes are in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
-2. How many transcripts your favourite gene has, e.g. ENSG00000001461?
-3. How many exons?
-4. Which exon is the longest?
-5. Using the annotation file, print odd lines.
-6. Make a file of the transcriptIDs annotated by Havana.
-7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
+1. [Shell scripting](#exercises---shell-scripting)
+2. [awk](#exercises---awk)
 
 ---
 ### Exercises - Shell scripting
@@ -34,6 +23,17 @@
 8. Write a shell program to read two numbers and display all the odd numbers between those two numbers.
 9. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
 10. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
+
+---
+### Exercises - awk
+
+1. How many genes are in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
+2. How many transcripts your favourite gene has, e.g. ENSG00000001461?
+3. How many exons?
+4. Which exon is the longest?
+5. Using the annotation file, print odd lines.
+6. Make a file of the transcriptIDs annotated by Havana.
+7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 
 ---
 ### License
