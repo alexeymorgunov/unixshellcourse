@@ -9,6 +9,7 @@
 
 1. [Shakespeare](#answers-to-exercises---shakespeare)
 2. [Human genome](#answers-to-exercises---human-genome)
+3. [PDB](#answers-to-exercises---pdb)
 
 ---
 ### Answers to exercises - Shakespeare
@@ -79,6 +80,20 @@ awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $10); printf("%s\t%d\
 ```
 
 Learn more about `awk` [here](Notes2.md#awk).
+
+---
+### Answers to exercises - PDB
+
+1. Extract the protein sequence from the PDB file (ATOM instances).
+  ```bash
+cat 1A8Q.pdb | grep ^ATOM | cut -c18-26 | uniq | cut -d" " -f1 > sequence.txt
+```
+
+2. Chech if the sequence from ATOM instances matches the one in SEQRES.
+  ```bash
+cat 1A8Q.pdb | grep ^SEQRES | cut -c20- | tr " " "\n" | sed '/^$/d' > sequence2.txt
+diff sequence.txt sequence2.txt
+```
 
 ---
 ### License

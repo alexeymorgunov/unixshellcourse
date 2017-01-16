@@ -9,6 +9,7 @@
 
 1. [Shakespeare](#exercises---shakespeare)
 2. [Human genome](#exercises---human-genome)
+3. [PDB](#exercises---pdb)
 
 Download and unpack the [`text files`]() and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
 
@@ -28,6 +29,11 @@ Download and unpack the [`text files`]() and the [`human reference genome annota
 4. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 5. Which exon is the longest?
 
+---
+### Exercises - PDB
+
+1. Extract the protein sequence from the PDB file.
+2. Chech if the sequence from ATOM instances matches the one in SEQRES.
 
 ---
 ### License
