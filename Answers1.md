@@ -16,13 +16,11 @@
   ```bash
 tr -sc "A-Za-z\'" '\n' < shakespeare.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nk1
 ```  
-
 2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
 ```bash
 grep -i "england" shakespeare.txt | wc -l
 grep -i "england" shakespeare.txt | tr -sc "A-Za-z\'" '\n' | tr '[:upper:]' '[:lower:]' | grep -v "england" | grep '.\{4\}' | sort | uniq -c | sort -nk1
 ```  
-
 3. Find the most common bigrams Shakespeare uses. Trigrams?
   ```bash
 #bigrams
