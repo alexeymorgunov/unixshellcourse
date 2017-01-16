@@ -45,3 +45,6 @@ Many of the shell scripting exercises are taken from [Linux Shell Scripting Tuto
 
 This material is released under a
 [CC-BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/) ![license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png).
+
+---
+This is the part where I'd love to link to my personal website, but it is still work in progress, so for now I'll just leave a link to the [verb conjugation resource in many languages](http://cooljugator.com) that I built together with a friend over the past year. Lots of shell scripting was used in the process of building it, and I actually used my own course notes as reference all the time!:D
