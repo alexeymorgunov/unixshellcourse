@@ -12,6 +12,8 @@
 3. [PDB](#answers-to-exercises---pdb)
 4. [More sed](#answers-to-exercises---more-sed)
 
+Download and unpack the [`text files`](exercises/text_files.zip) and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
+
 ---
 ### Answers to exercises - Shakespeare
 
