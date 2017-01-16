@@ -126,7 +126,7 @@ uniq [file] #print only unique lines (detects only adjacent duplicates! sort fir
 uniq -c [file] #show number of times the line occurs before each line
 ```
 
-Operations on lines:
+Operations on strings:
 ```bash
 rev [file] #reverse the characters in each line of file
 cut -c2 [file] #cut 2nd character from each line
@@ -253,7 +253,7 @@ cd ~/[folder]/bin #go to where the binaries usually are
 ./[binary] #run the program
 ```
 
-The following commands and tools are useful ins some specific cases, check out their usage by following the links!
+The following commands and tools are useful in some specific cases, check out their usage by following the links!
 
 Downloading files:
 * `wget` - see [here](http://www.computerhope.com/unix/wget.htm).

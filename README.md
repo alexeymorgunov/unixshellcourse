@@ -28,7 +28,7 @@ Begin here: [Notes](Notes1.md).
 
 **Work in progress, please check back later for more!**
 
-(The night before the practical on 8 Feb will probably see an update...)
+_(The night before the practical on 8 Feb will probably see an update...)_
 
 Begin here: [Notes](Notes2.md).
 
