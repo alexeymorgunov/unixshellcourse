@@ -25,8 +25,8 @@
 ---
 ### Exercises - awk
 
-1. How many genes are in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
-2. How many transcripts your favourite gene has, e.g. ENSG00000001461?
+1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
+2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
 3. How many exons?
 4. Which exon is the longest?
 5. Using the annotation file, print odd lines.
