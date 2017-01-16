@@ -12,12 +12,18 @@
 ---
 ### Answers to exercises - Shakespeare
 
-1. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
+1. Check you have the `shakespeare.txt` file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
   ```bash
 tr -sc "A-Za-z\'" '\n' < shakespeare.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nk1
 ```  
 
-2. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
+2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
+```bash
+grep -i "england" shakespeare.txt | wc -l
+grep -i "england" shakespeare.txt | tr -sc "A-Za-z\'" '\n' | tr '[:upper:]' '[:lower:]' | grep -v "england" | grep '.\{4\}' | sort | uniq -c | sort -nk1
+```  
+
+3. Find the most common bigrams Shakespeare uses. Trigrams?
   ```bash
 #bigrams
 tr -sc "A-Za-z\'" '\n' < shakespeare.txt > sh.words

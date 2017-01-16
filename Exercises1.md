@@ -9,11 +9,14 @@
 
 1. [Shakespeare](#exercises---shakespeare)
 
+Download and unpack the [`text files`]() and the [`human genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
+
 ---
 ### Exercises - Shakespeare
 
-1. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
-2. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
+1. Check you have the `shakespeare.txt` file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
+2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
+3. Find the most common bigrams Shakespeare uses. Trigrams?
 
 
 
