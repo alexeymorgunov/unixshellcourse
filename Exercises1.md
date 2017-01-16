@@ -8,8 +8,9 @@
 ## Contents
 
 1. [Shakespeare](#exercises---shakespeare)
+2. [Human genome](#exercises---human-genome)
 
-Download and unpack the [`text files`]() and the [`human genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
+Download and unpack the [`text files`]() and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
 
 ---
 ### Exercises - Shakespeare
@@ -18,6 +19,16 @@ Download and unpack the [`text files`]() and the [`human genome`](exercises/Homo
 2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
 3. Find the most common bigrams Shakespeare uses. Trigrams?
 
+---
+### Exercises - Human genome
+
+1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
+2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
+3. How many exons?
+4. Which exon is the longest?
+5. Using the annotation file, print odd lines.
+6. Make a file of the transcriptIDs annotated by Havana.
+7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 
 
 ---
