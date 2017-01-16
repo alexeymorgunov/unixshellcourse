@@ -7,10 +7,13 @@
 
 ## Contents
 
-1. [Awk](#exercises---awk)
+1. [Shakespeare](#exercises---shakespeare)
 
 ---
-### Exercises - Awk
+### Exercises - Shakespeare
+
+1. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
+2. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
 
 
 

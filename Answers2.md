@@ -191,26 +191,6 @@ else
 fi
 ```  
 
-9. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
-  ```bash
-tr -sc "A-Za-z\'" '\n' < shakespeare.txt | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nk1
-```  
-
-10. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
-  ```bash
-#bigrams
-tr -sc "A-Za-z\'" '\n' < shakespeare.txt > sh.words
-tail -n +2 sh.words > sh.nextwords
-paste sh.words sh.nextwords > sh.bigrams
-tr 'A-Z' 'a-z' < sh.bigrams | sort | uniq -c | sort -k 1n
-#trigrams
-tail -n +3 sh.words > sh.thirdwords
-paste sh.words sh.nextwords sh.thirdwords > sh.trigrams
-cat sh.trigrams | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -k 1n
-```  
-
-  Yeah, the file isn't filtered for the copyright notice. Can you do that?  
-
 ---
 ### Answers to exercises - awk
 

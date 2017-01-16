@@ -140,7 +140,7 @@ paste - - < [file] #paste the data in file into two columns
 paste -d',:' - - - < [file] #three columns, two different delimiters
 paste -d',' [file1] [file2] #join two files by columns, c.f. `join`
 paste -d'\n' [file1] [file2] #read lines in both files alternatively
-echo "hello" | tr l b #simple by-character substitution of input string (l for b)
+echo "hello" | tr l r #simple by-character substitution of input string (l for r)
 ```
 
 `join` is a very useful tool - more tricks [here](https://web.archive.org/web/20100327202423/http://www.albany.edu/~ig4895/join.htm).

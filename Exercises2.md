@@ -21,8 +21,6 @@
 6. Write a shell script that, given a file name as the argument will write the even numbered line to a file with name `evenfile` and odd numbered lines in a text file called `oddfile`.
 7. Write a shell program to read a number (such as 123) and find the sum of digits (1+2+3=6).
 8. Write a shell program to read two numbers and display all the odd numbers between those two numbers.
-9. Right click and save the [`shakespeare.txt`](exercises/shakespeare.txt) file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful with counting capitalised and non-capitalised words separately, and take care of the apostrophe!
-10. Working with the file from 9, find the most common bigrams Shakespeare uses. Trigrams?
 
 ---
 ### Exercises - awk
