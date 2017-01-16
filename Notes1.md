@@ -113,6 +113,7 @@ less [file] #one page at a time, space for next, (q)uit
 gedit [file] #open text editor, also 'emacs', 'vi'
 head -N [file] #display top N lines of file
 tail -N [file] #display bottom N lines of file
+tail -n +N [file] #display all lines to the end after N lines from the top
 wc [file] #word, line, character and byte count
 ```
 
