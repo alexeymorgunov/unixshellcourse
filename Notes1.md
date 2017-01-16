@@ -29,7 +29,7 @@ In this tutorial I focus on explaining the *Logic* component and on building som
 
 Important! There are many links to extra resources included in this tutorial. They are for extra information only.
 
-**If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises.md) section and try your skills at it.
+**If you have previous experience with Unix shell.** Skip to the [*Exercises*](Exercises1.md) section and try your skills at it.
 
 ---
 ### Basics
