@@ -10,6 +10,7 @@
 1. [Shakespeare](#answers-to-exercises---shakespeare)
 2. [Human genome](#answers-to-exercises---human-genome)
 3. [PDB](#answers-to-exercises---pdb)
+4. [More sed](#answers-to-exercises---more-sed)
 
 ---
 ### Answers to exercises - Shakespeare
@@ -84,7 +85,7 @@ Learn more about `awk` [here](Notes2.md#awk).
 ---
 ### Answers to exercises - PDB
 
-1. Extract the protein sequence from the PDB file (ATOM instances).
+1. Extract the protein sequence from the PDB file `1A8Q.pdb` (ATOM instances).
   ```bash
 cat 1A8Q.pdb | grep ^ATOM | cut -c18-26 | uniq | cut -d" " -f1 > sequence.txt
 ```
@@ -93,6 +94,14 @@ cat 1A8Q.pdb | grep ^ATOM | cut -c18-26 | uniq | cut -d" " -f1 > sequence.txt
   ```bash
 cat 1A8Q.pdb | grep ^SEQRES | cut -c20- | tr " " "\n" | sed '/^$/d' > sequence2.txt
 diff sequence.txt sequence2.txt
+```
+
+---
+### Answers to exercises - More sed
+
+1. Write a script that would combine the split lines in `split_lines.txt` using `sed`.
+  ```bash
+sed 'N; s/\n / /; P; D' split_lines.txt
 ```
 
 ---

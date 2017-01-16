@@ -10,6 +10,7 @@
 1. [Shakespeare](#exercises---shakespeare)
 2. [Human genome](#exercises---human-genome)
 3. [PDB](#exercises---pdb)
+4. [More sed](#exercises---more-sed)
 
 Download and unpack the [`text files`]() and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
 
@@ -32,8 +33,13 @@ Download and unpack the [`text files`]() and the [`human reference genome annota
 ---
 ### Exercises - PDB
 
-1. Extract the protein sequence from the PDB file.
+1. Extract the protein sequence from the PDB file `1A8Q.pdb` (ATOM instances).
 2. Chech if the sequence from ATOM instances matches the one in SEQRES.
+
+---
+### Exercises - More sed
+
+1. Write a script that would combine the split lines in `split_lines.txt` using `sed`.
 
 ---
 ### License
