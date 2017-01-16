@@ -100,6 +100,7 @@ diff sequence.txt sequence2.txt
 ### Answers to exercises - More sed
 
 1. Write a script that would combine the split lines in `split_lines.txt` using `sed`.
+
   ```bash
 sed 'N; s/\n / /; P; D' split_lines.txt
 ```
