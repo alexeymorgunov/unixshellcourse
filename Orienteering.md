@@ -91,9 +91,27 @@ uniq -c numbers.txt # what is the problem here?
 sort -n numbers.txt | uniq -c
 ```
 
-Let's take a look at some `grep` and `sed`, but only some introductory examples.
+Let's take a look at some `grep` and `sed`, but only some very basic examples. They can do much more than this!
 
-Some important syntax issues. Compare the outputs of similar lines and figure out what is different. Use [notes](Notes1.md#wildcards-special-syntax-and-regular-expressions) as help if needed.
+```bash
+grep "o" animals.txt
+grep -v "o" animals.txt
+grep "dog" animals.txt
+grep -i "dog" animals.txt
+sed "s/o/O/g" animals.txt
+```
+
+And just a couple more tricks. Also, worth checking out `cut`, `paste`,`join`, `diff` and `comm` in more detail.
+
+```bash
+rev animals.txt
+cut -c3-5 animals.txt
+paste - - < animals.txt
+paste -d',' -s animals.txt
+echo "hello" | tr l r
+```
+
+Finally, some important syntax issues. Compare the outputs of similar lines and figure out what is different. Use [notes](Notes1.md#wildcards-special-syntax-and-regular-expressions) as help if needed.
 
 ```bash
 echo ls
