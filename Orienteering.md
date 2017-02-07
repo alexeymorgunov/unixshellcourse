@@ -19,15 +19,35 @@ Try the following commands (one command per line) to learn to navigate around yo
 pwd
 ls
 cd [folder name]
-ls -l
-man ls #hit <q> to exit, <space> to move down one page
+ls -l     # what useful information is displayed here?
+man ls    # hit <q> to exit, <space> to move down one page
 ls -lht
 cd ..
 cd ~
 cd -
+cd .
 ```
 
-Come back to some cosy home directory where you can play around without wrecking havoc on your computer.
+Come back to some cosy home directory where you can play around without wreaking havoc on your computer. N.B. The commands in this section are listed in the order of suggested execution. Make sure you understand what is happening in each line and can answer the questions!
+
+```bash
+mkdir sandbox
+cd sandbox
+echo 'Hello, world!' > hello.txt
+cp hello.txt ../hello.txt.copy    # where is the copied file? where is the original?
+cp -r ../sandbox ../sandbox2         # you don't have to be in the same directory as the file/folder
+mv hello.txt ../hello.txt.copy2   # and now?
+# how would you rename a file?
+cd ..
+rm hello.txt.copy2
+rmdir sandbox
+rmdir sandbox2    # why does this not work unlike the one above?
+rm -r sandbox2
+find . -name '*txt*'
+find . -name '*txt*' -delete
+```
+
+
 
 ---
 ### License
