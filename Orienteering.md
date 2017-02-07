@@ -47,7 +47,7 @@ find . -name '*txt*'
 find . -name '*txt*' -delete
 ```
 
-Let's look at some redirection and pipes (see [here](#Notes1.md#redirection--pipes)) by exploring where these commands put our text. Use any text you like but make it different between inputs.
+Let's look at some redirection and pipes (see [here](Notes1.md#redirection--pipes)) by exploring where these commands put our text. Use any text you like but make it different between inputs.
 
 ```bash
 echo 'Hello, world!' > hello.txt
@@ -63,14 +63,57 @@ cat hello.txt file.txt > long.txt
 cat long.txt
 ```
 
-Now let's do some sorting.
+How best to look at our text files?
+
+```bash
+cat long.txt
+less long.txt       # <q> to quit
+gedit long.txt
+head -3 long.txt
+tail -3 long.txt
+tail -n +3 long.txt
+wc long.txt         # what options does 'wc' have? what can you do with it?
+```
+
+Now let's do some sorting. Figure out how these functions and parameters work.
 
 ```bash
 sort < long.txt > sorted.txt
 cat long.txt | sort > sorted2.txt   # is there any difference between the two methods?
+cat > animals.txt  # e.g. cat, dog, cat, hedgehog, horse, Dog, human, 1 more human
+cat > numbers.txt  # e.g. 3, 4, 2, 1, 10, 102, 101, 10, 10, one too many
+sort animals.txt   # what is the problem? how to overcome it?
+sort -f animals.txt
+sort -ur animals.txt
+sort numbers.txt   # what is the problem? how to overcome it?
+sort -n numbers.txt
+uniq -c numbers.txt # what is the problem here?
+sort -n numbers.txt | uniq -c
 ```
 
+Let's take a look at some `grep` and `sed`, but only some introductory examples.
 
+Some important syntax issues. Compare the outputs of similar lines and figure out what is different. Use [notes](Notes1.md#wildcards-special-syntax-and-regular-expressions) as help if needed.
+
+```bash
+echo ls
+echo "ls"
+echo 'ls'
+echo `ls`
+
+echo $HOME
+echo ${HOME}
+echo \$HOME
+echo \\$HOME
+echo \\\$HOME
+
+echo '$HOME | ls'
+echo "$HOME | ls"
+echo `$HOME | ls`
+
+echo f{oo,ee,e}d
+echo $((42+42))
+```
 
 ---
 ### License
