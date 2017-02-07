@@ -35,7 +35,7 @@ mkdir sandbox
 cd sandbox
 echo 'Hello, world!' > hello.txt
 cp hello.txt ../hello.txt.copy    # where is the copied file? where is the original?
-cp -r ../sandbox ../sandbox2         # you don't have to be in the same directory as the file/folder
+cp -r ../sandbox ../sandbox2      # you don't have to be in the same directory as the file/folder
 mv hello.txt ../hello.txt.copy2   # and now?
 # how would you rename a file?
 cd ..
@@ -45,6 +45,29 @@ rmdir sandbox2    # why does this not work unlike the one above?
 rm -r sandbox2
 find . -name '*txt*'
 find . -name '*txt*' -delete
+```
+
+Let's look at some redirection and pipes (see [here](#Notes1.md#redirection--pipes)) by exploring where these commands put our text. Use any text you like but make it different between inputs.
+
+```bash
+echo 'Hello, world!' > hello.txt
+cat hello.txt
+cat > file.txt      # <enter> to start a new line, <CTRL+D> when done entering text
+cat file.txt
+cp file.txt file2.txt
+cat hello.txt >> file.txt
+cat file.txt
+cat hello.txt > file2.txt    # how is '>' different from '>>' ?
+cat file2.txt
+cat hello.txt file.txt > long.txt
+cat long.txt
+```
+
+Now let's do some sorting.
+
+```bash
+sort < long.txt > sorted.txt
+cat long.txt | sort > sorted2.txt   # is there any difference between the two methods?
 ```
 
 
