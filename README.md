@@ -28,15 +28,11 @@ Begin here: [Notes](Notes1.md).
 
 **Work in progress, please check back later for more!**
 
-_(The night before the practical on 8 Feb will probably see an update...)_
+This short course is based on some reference style notes and exercises. Start by looking at the notes and trying to solve some exercises in parallel.
 
-Begin here: [Notes](Notes2.md).
+Begin here: [Notes](Notes1.md). Then attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises. Please only check them once you have given the exercises a proper try.
 
-[Exercises](Exercises2.md).
-
-[Answers](Answers2.md) to exercises. Please only check them once you have given the exercises a proper try.
-
-
+Continue with [Notes 2](Notes2.md), attempting the [Exercises 2](Exercises2.md). (You don't necessarily have to solve every single scripting one, it might take too long, just try a couple.) [Answers 2](Answers2.md) to exercises 2. Please only check them once you have given the exercises a proper try.
 
 ---
 ### License

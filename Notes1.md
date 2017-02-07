@@ -5,6 +5,11 @@
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Alexey Morgunov
 
+* 2016/17 Part III Systems Biology SEB module
+* 8 Feb 2017, 10:00-13:00
+* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
+* Alexey Morgunov
+
 ## Contents
 
 1. [Introduction](#introduction)
