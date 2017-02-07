@@ -111,7 +111,7 @@ paste -d',' -s animals.txt
 echo "hello" | tr l r
 ```
 
-Finally, some important syntax issues. Compare the outputs of similar lines and figure out what is different. Use [notes](Notes1.md#wildcards-special-syntax-and-regular-expressions) as help if needed.
+Finally, some important syntax issues. Compare the outputs of similar lines and figure out what is different. Use [Notes](Notes1.md#wildcards-special-syntax-and-regular-expressions) as help if needed.
 
 ```bash
 echo ls

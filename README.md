@@ -36,6 +36,8 @@ Then attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises
 
 Continue with [Notes 2](Notes2.md), attempting the [Exercises 2](Exercises2.md). (You don't necessarily have to solve every single scripting one, it might take too long, just try a couple.) [Answers 2](Answers2.md) to exercises 2. Please only check them once you have given the exercises a proper try.
 
+If you are done with it all, learn about [Git](Notes2.md#miscellaneous), create a new repository on GitHub and upload your answer scripts to that repository.
+
 ---
 ### License
 
