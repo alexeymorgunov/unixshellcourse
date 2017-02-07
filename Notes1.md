@@ -66,7 +66,8 @@ cp [file1] [file2] #copy file1 to location file2
 cp [file] . #copy file from its location to working directory
 mv [file1] [file2] #move file1 to location file2, e.g. rename
 rm [file] #delete file
-rmdir [directory] #delete directory
+rmdir [directory] #delete directory (only if empty)
+rm -r [directory] #delete recursively
 ln -s [file] [link] #create symbolic link to file
 touch [file] #create file or update timestamp of file
 ```
@@ -94,6 +95,7 @@ This works by adding permission codes to make an octal:
 * 4 – read (r)
 * 2 – write (w)
 * 1 – execute (x)
+
 Specified for owner, group and world, in that order.
 
 There are alternative, non-octal options - see `man chmod`.
@@ -205,13 +207,13 @@ To match none or more characters in a file name, a wildcard `*.pdf` can be used,
 mouse$ #only at the end of line
 ```
 
-* *Backslash* works as an escape character.
-* *Single quotes* quote everything inside them as is, no need for escape characters.
-* *Backticks* work as command substitution.
-* *Double quotes* preserve everything except variables and backquoted expressions.
-* *Double parentheses* are used for arithmetic operations.
-* *Braces* are used for parameter expansion, and also to identify variables unambiguously (among other things).
-* *Brackets* are a bit more complicated. *Single brackets* use builtin simple test evaluation, while *Double brackets* are more modern and generally more compatible but not all shells have them. See [Shell scripting](Notes2.md#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
+* *Backslash* - \ - works as an escape character.
+* *Single quotes* - '...' - quote everything inside them as is, no need for escape characters.
+* *Backticks* - \`...\` - work as command substitution.
+* *Double quotes* - "..." - preserve everything except variables and backquoted expressions.
+* *Double parentheses* - ((...)) - are used for arithmetic operations.
+* *Braces* - {...} - are used for parameter expansion, and also to identify variables unambiguously (among other things).
+* *Brackets* - [...] - are a bit more complicated. *Single brackets* - [...] - use builtin simple test evaluation, while *Double brackets* - [[...]] - are more modern and generally more compatible but not all shells have them. See [Shell scripting](Notes2.md#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
 ```bash
 echo $HOME #what you expect, evaluates the variable
 echo \$HOME #just a string, escapes the variable

@@ -1,8 +1,8 @@
 # Unix shell course
 
-*Bioinformatics students* - please follow the links for the first part below. You may also be interested in checking out the second part on your own for more advanced topics in Unix shell.
+*Bioinformatics students* - please follow the links for the first part below.
 
-*Systems Biology students* - please follow the links for the second part below. The first part may be useful to you as a reference for more basic functions that you should be already familiar with.
+*Systems Biology students* - please follow the links for the second part below.
 
 ---
 ## Introduction to Unix shell
@@ -19,7 +19,7 @@ Begin here: [Notes](Notes1.md).
 [Answers](Answers1.md) to exercises. Please only check them once you have given the exercises a proper try.
 
 ---
-## More advanced Unix shell
+## Introduction to Unix shell 2
 
 * 2016/17 Part III Systems Biology SEB module
 * 8 Feb 2017, 10:00-13:00
