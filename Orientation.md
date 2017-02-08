@@ -43,8 +43,8 @@ rm hello.txt.copy2
 rmdir sandbox
 rmdir sandbox2    # why does this not work unlike the one above?
 rm -r sandbox2
-find . -name '*txt*'
-find . -name '*txt*' -delete
+find . -name 'hello.txt*'
+find . -name 'hello.txt*' -delete
 ```
 
 Let's look at some redirection and pipes (see [here](Notes1.md#redirection--pipes)) by exploring where these commands put our text. Use any text you like but make it different between inputs.
