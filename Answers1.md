@@ -46,9 +46,7 @@ tr 'A-Z' 'a-z' < sh.bigrams | sort | uniq -c | sort -nk1
 tail -n +3 sh.words > sh.thirdwords
 paste sh.words sh.nextwords sh.thirdwords > sh.trigrams
 cat sh.trigrams | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -nk1
-```  
-
-  Yeah, the file isn't filtered for the copyright notice. Can you do that?  
+```
 
 ---
 ### Answers to exercises - Human genome
@@ -113,6 +111,8 @@ diff sequence.txt sequence2.txt
   ```bash
 sed 'N; s/\n / /; P; D' split_lines.txt
 ```
+
+Explanation from [Wikipedia](https://en.wikipedia.org/wiki/Sed#Multiline_processing_example).
 
 ---
 ### License

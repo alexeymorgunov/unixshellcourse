@@ -29,8 +29,8 @@
 2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
 3. How many exons?
 4. Which exon is the longest?
-5. Using the annotation file, print odd lines.
-6. Make a file of the transcriptIDs annotated by Havana.
+5. Make a file of the transcriptIDs annotated by Havana.
+6. Print odd lines.
 7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 
 ---

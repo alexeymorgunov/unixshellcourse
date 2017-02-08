@@ -26,11 +26,9 @@ Begin here: [Notes](Notes1.md).
 * Bioinformatics Training Room, Craik-Marshall Building, Downing Site
 * Alexey Morgunov
 
-**Work in progress, please check back later for more!**
-
 This short course is based on some reference style notes and exercises. Start by looking at the notes and trying to solve some exercises in parallel.
 
-Begin here: [Notes](Notes1.md). Try to go through the [Orienteering](Orienteering.md) exercise and understand how the most basic commands work. Even if this isn't your first time with shell, you might find it useful as a refresher.
+Begin here: [Notes](Notes1.md). Try to go through the [Orientation](Orientation.md) exercise and understand how the most basic commands work. Even if this isn't your first time with shell, you might find it useful as a refresher.
 
 Then attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises. Please only check them once you have given the exercises a proper try.
 

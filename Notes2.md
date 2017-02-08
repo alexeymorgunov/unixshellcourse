@@ -25,7 +25,7 @@ This is where things get real. Shell can be used as a general purpose interprete
 
 Shell scripts are usually stored as text files with `.sh` as the extension and starting with a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) consisting of `#!/bin/sh`.
 
-Variables are prefixed with a dollar sign when called, e.g. `$HOME` and assigned with a single equals sign, e.g. `my_variable=42`. To avoid ambiguity in scripts, it is often customary to surround variable names with braces, e.g. `${HOME}`. More on variables [here](http://steve-parker.org/sh/variables1.shtml).
+Variables are prefixed with a dollar sign when called, e.g. `$HOME` and assigned with a single equals sign, e.g. `meaning=42`. To avoid ambiguity in scripts, it is often customary to surround variable names with braces, e.g. `${HOME}`. More on variables [here](http://steve-parker.org/sh/variables1.shtml).
 
 **Conditional statements**:
 ```bash
@@ -47,7 +47,7 @@ if [ $1 -gt 0 ]; then
 fi
 ```
 
-Note that in the above example, special variable `$1` refers to the first argument supplied when running the script. Save the script to a file named `my_script.sh` and run it using the command `./my_script.sh [number]`.
+Note that in the above example, special variable `$1` refers to the first argument supplied when running the script. Save the script to a file named `my_script.sh` and run it using the command `./my_script.sh [number]`. This is an example of "positional parameter" usage. For more on positional parameters, see [here](http://wiki.bash-hackers.org/scripting/posparams).
 
 **Case statements**:
 ```bash
@@ -98,7 +98,7 @@ done
 #example
 
 #!/bin/sh
-for ((  i = 0 ;  i <= 5;  i++  )); do
+for ((  i = 0;  i <= 5;  i++  )); do
   echo "Welcome $i times"
 done
 ```
@@ -133,7 +133,7 @@ There are some `awk` specific exercises [here](Exercises2.md#exercises---awk).
 
 There are some other things you should definitely know about if you are going anywhere near programming:
 
-**Git and GitHub** allow version tracking and collaborative development. Don't worry, [nobody understands it](http://xkcd.com/1597/). But it is still incredibly useful. Start [here](https://try.github.io/levels/1/challenges/1) and [here](https://guides.github.com/).
+**Git and GitHub** allow version tracking and collaborative development. Don't worry, [nobody understands it](http://xkcd.com/1597/). But it is still incredibly useful. Start [here](https://try.github.io/levels/1/challenges/1) (official) or even better [here](http://rogerdudler.github.io/git-guide/) or [here](https://learnxinyminutes.com/docs/git/).
 
 **Make** is a peculiar little tool that is worth understanding as it can save lots of time and pain by automating very tedious tasks. Check out the [shorter](http://mrbook.org/blog/tutorials/make/) and [longer](http://www.tutorialspoint.com/makefile/) tutorials. A good example of what it can do is to automate git processes for a repository to one command `make all` if the following is saved in the `Makefile`:
 ```bash

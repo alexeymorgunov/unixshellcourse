@@ -1,4 +1,4 @@
-# Introduction to Unix shell - Orienteering
+# Introduction to Unix shell - Orientation
 
 * 2016/17 Part III Systems Biology SEB module
 * 8 Feb 2017, 10:00-13:00
@@ -11,7 +11,7 @@
 This extended exercise is intended as a way to familiarise yourself with (or refresh your memory of) the most basic commands in shell. Work through the commands sequentially, trying to understand exactly what's happening at each step and answering the questions. Refer to [Notes](Notes1.md) for help.
 
 ---
-### Orienteering
+### Orientation
 
 Try the following commands (one command per line) to learn to navigate around your file system. Explore! N.B. The commands are not listed in any particular order in this section.
 

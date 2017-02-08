@@ -103,7 +103,7 @@ echo "Vowels : $v"
 #advanced ends
 echo "Characters : $(cat $file | wc -c)"
 echo "Blank lines : $(grep  -c '^$' $file)"
-echo "Lines : $(cat $file|wc -l )"
+echo "Lines : $(cat $file | wc -l)"
 ```  
 
 6. Write a shell script that, given a file name as the argument will write the even numbered line to a file with name `evenfile` and odd numbered lines in a text file called `oddfile`.
@@ -198,8 +198,8 @@ fi
 2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
 3. How many exons?
 4. Which exon is the longest?
-5. Using the annotation file, print odd lines.
-6. Make a file of the transcriptIDs annotated by Havana.
+5. Make a file of the transcriptIDs annotated by Havana.
+6. Print odd lines.
 7. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 
 ```bash
@@ -213,11 +213,11 @@ awk '$10 ~/ENSG00000001461/ && $3 ~/exon/' Homo_sapiens.GRCh38.82.gtf | wc -l
 #4
 awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $10); printf("%s\t%d\n", $10, ($5-$4))}' Homo_sapiens.GRCh38.82.gtf | sort -rnk2 | head -1
 #5
-awk ' $2 ~/^havana$/ && $3 ~/transcript/ {gsub(/"|;/, "", $10); print $14}' Homo_sapiens.GRCh38.82.gtf > havana_transcripts.txt
+awk '$2 ~/^havana$/ && $3 ~/transcript/ {gsub(/"|;/, "", $10); print $14}' Homo_sapiens.GRCh38.82.gtf > havana_transcripts.txt
 #6
-awk 'NR %2 ==0 ' Homo_sapiens.GRCh38.82.gtf | head
+awk 'NR %2 ==0' Homo_sapiens.GRCh38.82.gtf | head
 #7
-awk '$1 !~ /^#/ && $3 ~/exon/ { gsub(/"|;/, "", $14); gsub(/"|;/, "", $18);printf("%s\t%d\t%d\n",  $14, $18 , ($5-$4))} ' Homo_sapiens.GRCh38.82.gtf | head -3
+awk '$1 !~ /^#/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%d\t%d\n", $14, $18, ($5-$4))}' Homo_sapiens.GRCh38.82.gtf > exon_length.txt
 ```
 
 ---
