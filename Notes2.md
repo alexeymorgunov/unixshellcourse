@@ -7,12 +7,6 @@
 3. [awk](#awk)
 4. [Miscellaneous](#miscellaneous)
 
-
----
-### Introduction
-
-You may want to refresh some basics of Unix shell by referring to my introductory notes [here](Notes1.md).
-
 ---
 ### Shell scripting
 

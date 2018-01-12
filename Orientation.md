@@ -1,6 +1,5 @@
 # Introduction to Unix shell - Orientation
 
----
 ### Introduction
 
 This extended exercise is intended as a way to familiarise yourself with (or refresh your memory of) the most basic commands in shell. Work through the commands sequentially, trying to understand exactly what's happening at each step and answering the questions. Refer to [Notes](Notes1.md) for help.
@@ -58,7 +57,7 @@ cat hello.txt file.txt > long.txt
 cat long.txt
 ```
 
-How best to look at our text files?
+What's the best way to look at our text files?
 
 ```bash
 cat long.txt
