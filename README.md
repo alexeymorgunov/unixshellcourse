@@ -2,11 +2,11 @@
 
 Hello and welcome to this course! Slightly different versions of this course are being taught to different audiences. Please follow the correct instructions for your session.
 
-*Bioinformatics students* - Part II BBS Bioinformatics - 15:00-17:00, 15 Jan 2018
+**Part II BBS Bioinformatics** - 15:00-17:00, 15 Jan 2018
 
-*Bioinformatics training* - Cambridge Bioinformatics Training - 13:00-17:00, 16 Jan 2018
+**Cambridge Bioinformatics Training** - 13:00-17:00, 16 Jan 2018
 
-*Systems Biology students* - Part III Systems Biology - 10:00-13:00, 7 Feb 2018
+**Part III Systems Biology** - 10:00-13:00, 7 Feb 2018
 
 ---
 ## Introduction to Unix shell - Part 1
