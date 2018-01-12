@@ -7,11 +7,6 @@
 ---
 ## Introduction to Unix shell
 
-* 2016/17 Part II BBS Bioinformatics
-* 16 Jan 2017, 15:00-17:00
-* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Alexey Morgunov
-
 Begin here: [Notes](Notes1.md).
 
 [Exercises](Exercises1.md).
@@ -19,12 +14,7 @@ Begin here: [Notes](Notes1.md).
 [Answers](Answers1.md) to exercises. Please only check them once you have given the exercises a proper try.
 
 ---
-## Introduction to Unix shell 2
-
-* 2016/17 Part III Systems Biology SEB module
-* 8 Feb 2017, 10:00-13:00
-* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Alexey Morgunov
+## Introduction to Unix shell - Part 2
 
 This short course is based on some reference style notes and exercises. Start by looking at the notes and trying to solve some exercises in parallel.
 
