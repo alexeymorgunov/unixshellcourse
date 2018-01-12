@@ -1,10 +1,5 @@
 # Introduction to Unix shell - Orientation
 
-* 2016/17 Part III Systems Biology SEB module
-* 8 Feb 2017, 10:00-13:00
-* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Alexey Morgunov
-
 ---
 ### Introduction
 

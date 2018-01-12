@@ -11,7 +11,7 @@ Hello and welcome to this course! Slightly different versions of this course are
 ---
 ## Introduction to Unix shell - Part 1
 
-
+This short course is based on some reference style notes and exercises. Start by looking at the notes and trying to solve some exercises in parallel.
 
 Begin here: [Notes](Notes1.md).
 

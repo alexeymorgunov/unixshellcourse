@@ -1,17 +1,6 @@
 # Introduction to Unix shell - EXERCISES
 
-* 2016/17 Part II BBS Bioinformatics
-* 16 Jan 2017, 15:00-17:00
-* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Alexey Morgunov
-
-and
-
-* 2016/17 Part III Systems Biology SEB module
-* 8 Feb 2017, 10:00-13:00
-* Bioinformatics Training Room, Craik-Marshall Building, Downing Site
-* Alexey Morgunov
-
+---
 ## Contents
 
 1. [Shakespeare](#exercises---shakespeare)
