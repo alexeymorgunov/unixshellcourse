@@ -1,6 +1,5 @@
 # More advanced Unix shell - NOTES
 
----
 ## Contents
 
 1. [Introduction](#introduction)

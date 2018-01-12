@@ -1,6 +1,5 @@
 # Introduction to Unix shell - ANSWERS TO EXERCISES
 
----
 ## Contents
 
 1. [Shakespeare](#answers-to-exercises---shakespeare)

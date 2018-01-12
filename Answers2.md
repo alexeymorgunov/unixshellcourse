@@ -1,6 +1,5 @@
 # More advanced Unix shell - ANSWERS TO EXERCISES
 
----
 ## Contents
 
 1. [Shell scripting](#answers-to-exercises---shell-scripting)
