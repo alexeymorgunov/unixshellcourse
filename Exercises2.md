@@ -12,7 +12,7 @@
 2. Write a shell script that allows a user to enter any existing file name. The program should then copy file to /tmp directory. An advanced solution would check whether the file exists.
 3. Write a simple shell script where the user enters a pizza parlor bill total. Your script should then display a 10 percent tip.
 4. Write a simple calculator program that allows user to enter two numeric values and operand. The program should then print out the result of the operation on the two numbers. Make sure it works according to entered operand.
-5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of line and symbols. The advanced version would also count the number of vowels.
+5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of lines and symbols. The advanced version would also count the number of vowels.
 6. Write a shell script that, given a file name as the argument will write the even numbered line to a file with name `evenfile` and odd numbered lines in a text file called `oddfile`.
 7. Write a shell program to read a number (such as 123) and find the sum of digits (1+2+3=6).
 8. Write a shell program to read two numbers and display all the odd numbers between those two numbers.

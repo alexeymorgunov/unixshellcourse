@@ -2,12 +2,53 @@
 
 ## Contents
 
-1. [Shakespeare](#answers-to-exercises---shakespeare)
-2. [Human genome](#answers-to-exercises---human-genome)
+1. [Human genome](#answers-to-exercises---human-genome)
+2. [Shakespeare](#answers-to-exercises---shakespeare)
 3. [PDB](#answers-to-exercises---pdb)
 4. [More sed](#answers-to-exercises---more-sed)
 
 Download and unpack the [`text files`](exercises/text_files.zip) and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
+
+---
+### Answers to exercises - Human genome
+
+1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
+  ```bash
+cut -f3  Homo_sapiens.GRCh38.83.gtf | grep -c gene
+cut -f3  Homo_sapiens.GRCh38.83.gtf | sort | uniq -c #alternative
+```
+
+2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
+  ```bash
+grep "ENSG00000001461" Homo_sapiens.GRCh38.83.gtf | cut -f3 | grep "transcript" | wc -l
+```
+
+3. How many exons?
+  ```bash
+grep "ENSG00000001461" Homo_sapiens.GRCh38.83.gtf | cut -f3 | grep "exon" | wc -l
+```
+
+4. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
+  ```bash
+cat Homo_sapiens.GRCh38.83.gtf | tail -n +6 | cut -f9 | cut -d";" -f3 | cut -d\" -f2 > transcriptids.txt
+cat Homo_sapiens.GRCh38.83.gtf | tail -n +6 | cut -f9 | cut -d";" -f5 | cut -d\" -f2 > exon_nums.txt
+paste -d- <(cut -f5 Homo_sapiens.GRCh38.83.gtf) <(cut -f4 Homo_sapiens.GRCh38.83.gtf) | bc > exon_lengths.txt
+paste transcriptids.txt exon_nums.txt exon_lengths.txt > final_output.txt
+```
+
+5. Which exon is the longest?
+  ```bash
+grep "ENSG00000001461" Homo_sapiens.GRCh38.83.gtf  > gene.txt
+cat gene.txt | cut -f3,4,5 > temp1.txt
+cat gene.txt | cut -f9 | cut -f3,5 -d";" > temp2.txt
+paste temp1.txt temp2.txt | grep ^exon  > exons.txt
+paste -d- <(cut -f3 exons.txt) <(cut -f2 exons.txt) | bc > lengths.txt
+paste exons.txt lengths.txt | sort -nk8
+# you could do the same with awk in a much simpler way!
+awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $10); printf("%s\t%d\n", $10, ($5-$4))}' Homo_sapiens.GRCh38.83.gtf | sort -rnk2 | head -1
+```
+
+Learn more about `awk` [here](Notes2.md#awk).
 
 ---
 ### Answers to exercises - Shakespeare
@@ -35,47 +76,6 @@ tail -n +3 sh.words > sh.thirdwords
 paste sh.words sh.nextwords sh.thirdwords > sh.trigrams
 cat sh.trigrams | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -nk1
 ```
-
----
-### Answers to exercises - Human genome
-
-1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
-  ```bash
-cut -f3  Homo_sapiens.GRCh38.82.gtf | grep -c gene
-cut -f3  Homo_sapiens.GRCh38.82.gtf | sort | uniq -c #alternative
-```
-
-2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
-  ```bash
-grep "ENSG00000001461" Homo_sapiens.GRCh38.82.gtf | cut -f3 | grep "transcript" | wc -l
-```
-
-3. How many exons?
-  ```bash
-grep "ENSG00000001461" Homo_sapiens.GRCh38.82.gtf | cut -f3 | grep "exon" | wc -l
-```
-
-4. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
-  ```bash
-cat Homo_sapiens.GRCh38.82.gtf | tail -n +6 | cut -f9 | cut -d";" -f3 | cut -d\" -f2 > transcriptids.txt
-cat Homo_sapiens.GRCh38.82.gtf | tail -n +6 | cut -f9 | cut -d";" -f5 | cut -d\" -f2 > exon_nums.txt
-paste -d- <(cut -f5 trial.txt) <(cut -f4 trial.txt) | bc > exon_lengths.txt
-paste transcriptids.txt exon_nums.txt exon_lengths.txt > final_output.txt
-```
-
-5. Which exon is the longest?
-  ```bash
-grep "ENSG00000001461" Homo_sapiens.GRCh38.82.gtf  > gene.txt
-cat gene.txt | cut -f3,4,5 > temp1.txt
-cat gene.txt | cut -f9 | cut -f3,5 -d";" > temp2.txt
-paste temp1.txt temp2.txt | grep ^exon  > exons.txt
-paste -d- <(cut -f3 exons.txt) <(cut -f2 exons.txt) | bc > lengths.txt
-paste exons.txt lengths.txt | sort -nk8
-# you could do the same with awk in a much simpler way!
-awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $10); printf("%s\t%d\n", $10, ($5-$4))}' Homo_sapiens.GRCh38.82.gtf | sort -rnk2 | head -1
-```
-
-Learn more about `awk` [here](Notes2.md#awk).
 
 ---
 ### Answers to exercises - PDB

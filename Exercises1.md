@@ -2,19 +2,12 @@
 
 ## Contents
 
-1. [Shakespeare](#exercises---shakespeare)
-2. [Human genome](#exercises---human-genome)
+1. [Human genome](#exercises---human-genome)
+2. [Shakespeare](#exercises---shakespeare)
 3. [PDB](#exercises---pdb)
 4. [More sed](#exercises---more-sed)
 
 Download and unpack the [`text files`](exercises/text_files.zip) and the [`human reference genome annotation`](exercises/Homo_sapiens.GRCh38.83.gtf.gz).
-
----
-### Exercises - Shakespeare
-
-1. Check you have the `shakespeare.txt` file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
-2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
-3. Find the most common bigrams Shakespeare uses. Trigrams?
 
 ---
 ### Exercises - Human genome
@@ -24,6 +17,13 @@ Download and unpack the [`text files`](exercises/text_files.zip) and the [`human
 3. How many exons?
 4. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 5. Which exon is the longest?
+
+---
+### Exercises - Shakespeare
+
+1. Check you have the `shakespeare.txt` file (all works of Shakespeare as text). Process it to output a list of words with frequency counts. Be careful not to count capitalised and non-capitalised words separately, and take care of the apostrophe!
+2. Check how many times some country names are mentioned by Shakespeare. What are the most common words to co-occur in the same line with a country name? Filter your output for words shorter than four letters.
+3. Find the most common bigrams Shakespeare uses. Trigrams?
 
 ---
 ### Exercises - PDB

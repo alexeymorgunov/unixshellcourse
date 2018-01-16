@@ -77,7 +77,7 @@ cat long.txt | sort > sorted2.txt   # is there any difference between the two me
 cat > animals.txt  # e.g. cat, dog, cat, hedgehog, horse, Dog, human, 1 more human
 cat > numbers.txt  # e.g. 3, 4, 2, 1, 10, 102, 101, 10, 10, one too many
 sort animals.txt   # what is the problem? how to overcome it?
-sort -f animals.txt
+sort -f animals.txt # whether there is a "problem" in the above varies between Linux and Mac!
 sort -ur animals.txt
 sort numbers.txt   # what is the problem? how to overcome it?
 sort -n numbers.txt
@@ -119,9 +119,9 @@ echo \$HOME
 echo \\$HOME
 echo \\\$HOME
 
-echo '$HOME | ls'
-echo "$HOME | ls"
-echo `$HOME | ls`
+echo 'ls $HOME'
+echo "ls $HOME"
+echo `ls $HOME`
 
 echo f{oo,ee,e}d
 echo $((42+42))

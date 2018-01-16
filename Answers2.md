@@ -70,7 +70,7 @@ ans=$(( $a $op $b ))
 echo "$a $op $b = $ans"
 ```  
 
-5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of line and symbols. The advanced version would also count the number of vowels.
+5. Write a shell script that, given a file name as the argument will count blank spaces, characters, number of lines and symbols. The advanced version would also count the number of vowels.
   ```bash
 #!/bin/sh
 file=$1
@@ -199,20 +199,19 @@ fi
 
 ```bash
 #1
-cut -f3  Homo_sapiens.GRCh38.82.gtf | grep -c gene
-cut -f3  Homo_sapiens.GRCh38.82.gtf | sort | uniq -c #alternative
+awk '$3 ~/gene/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #2
-awk '$10 ~/ENSG00000001461/ && $3 ~/trans/' Homo_sapiens.GRCh38.82.gtf | wc -l
+awk '$10 ~/ENSG00000001461/ && $3 ~/trans/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #3
-awk '$10 ~/ENSG00000001461/ && $3 ~/exon/' Homo_sapiens.GRCh38.82.gtf | wc -l
+awk '$10 ~/ENSG00000001461/ && $3 ~/exon/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #4
-awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $10); printf("%s\t%d\n", $10, ($5-$4))}' Homo_sapiens.GRCh38.82.gtf | sort -rnk2 | head -1
+awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%s\t%s\t%s\t%s\t%d\n", $13, $14, $17, $18, "length", ($5-$4))}' Homo_sapiens.GRCh38.83.gtf | sort -rnk2 | head -1
 #5
-awk '$2 ~/^havana$/ && $3 ~/transcript/ {gsub(/"|;/, "", $10); print $14}' Homo_sapiens.GRCh38.82.gtf > havana_transcripts.txt
+awk '$2 ~/^havana$/ && $3 ~/transcript/ {gsub(/"|;/, "", $14); print $14}' Homo_sapiens.GRCh38.83.gtf > havana_transcripts.txt
 #6
-awk 'NR %2 ==0' Homo_sapiens.GRCh38.82.gtf | head
+awk 'NR %2 ==0' Homo_sapiens.GRCh38.83.gtf | head
 #7
-awk '$1 !~ /^#/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%d\t%d\n", $14, $18, ($5-$4))}' Homo_sapiens.GRCh38.82.gtf > exon_length.txt
+awk '$1 !~ /^#/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%d\t%d\n", $14, $18, ($5-$4))}' Homo_sapiens.GRCh38.83.gtf > exon_length.txt
 ```
 
 ---

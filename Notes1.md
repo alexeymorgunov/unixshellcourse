@@ -215,9 +215,9 @@ echo $HOME #what you expect, evaluates the variable
 echo \$HOME #just a string, escapes the variable
 echo \\$HOME #escapes the backslash, evaluates the variable
 echo \\\$HOME #if you want both escaped
-echo '$HOME | ls' #as is
-echo `$HOME | ls` #command substitution, executes and then displays
-echo "$HOME | ls" #variable evaluated, then everything is displayed without execution
+echo 'ls $HOME' #as is
+echo `ls $HOME` #command substitution, executes and then displays
+echo "ls $HOME" #variable evaluated, then everything is displayed without execution
 echo $((42+42)) #dollar sign is needed to treat it as variable
 echo f{oo,ee,e}d #displays all possible variants
 ```
@@ -244,7 +244,7 @@ Compiling and running software packages:
 ```bash
 tar -xf [archive] #unpack the archive
 cd [folder] #enter the folder (if necessary)
-./configure --prefix=$HOME/[folder] #create the Makefile and configures installation path
+./configure --prefix=$HOME/[folder] #create the Makefile and configure installation path
 make #build the package
 make check #optional: check it compiled correctly
 make install #install the package
