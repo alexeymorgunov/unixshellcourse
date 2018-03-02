@@ -29,7 +29,7 @@ Download and unpack the [`text files`](exercises/text_files.zip) and the [`human
 ### Exercises - PDB
 
 1. Extract the protein sequence from the PDB file `1A8Q.pdb` (ATOM instances).
-2. Chech if the sequence from ATOM instances matches the one in SEQRES.
+2. Check if the sequence from ATOM instances matches the one in SEQRES.
 
 ---
 ### Exercises - More sed

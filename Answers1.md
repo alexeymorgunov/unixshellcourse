@@ -85,7 +85,7 @@ cat sh.trigrams | tr "[:upper:]" "[:lower:]" | sort | uniq -c | sort -nk1
 cat 1A8Q.pdb | grep ^ATOM | cut -c18-26 | uniq | cut -d" " -f1 > sequence.txt
 ```
 
-2. Chech if the sequence from ATOM instances matches the one in SEQRES.
+2. Check if the sequence from ATOM instances matches the one in SEQRES.
   ```bash
 cat 1A8Q.pdb | grep ^SEQRES | cut -c20- | tr " " "\n" | sed '/^$/d' > sequence2.txt
 diff sequence.txt sequence2.txt
