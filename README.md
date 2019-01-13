@@ -7,6 +7,7 @@ Hello and welcome to this course!
 2. Attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises are available but please only check them once you have given the exercises a fair try. I will be walking around the room if you have any questions.
 
 Part 2 of the course is optional, you're welcome to continue with it after finishing Part 1, or to complete it at home.
+
 ---
 ## Introduction to Unix shell - Part 1
 
