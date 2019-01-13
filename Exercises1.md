@@ -13,7 +13,7 @@ Download and unpack the [`text files`](exercises/text_files.zip) and the [`human
 ### Exercises - Human genome
 
 1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
-2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
+2. How many transcripts does your favourite gene have, e.g. ENSG00000113643?
 3. How many exons?
 4. Produce a tab separated file with these columns: transcriptID, exon_number, exon_length.
 5. Which exon is the longest?

@@ -190,7 +190,7 @@ fi
 ### Answers to exercises - awk
 
 1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
-2. How many transcripts does your favourite gene have, e.g. ENSG00000001461?
+2. How many transcripts does your favourite gene have, e.g. ENSG00000113643?
 3. How many exons?
 4. Which exon is the longest?
 5. Make a file of the transcriptIDs annotated by Havana.
@@ -201,11 +201,11 @@ fi
 #1
 awk '$3 ~/gene/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #2
-awk '$10 ~/ENSG00000001461/ && $3 ~/trans/' Homo_sapiens.GRCh38.83.gtf | wc -l
+awk '$10 ~/ENSG00000113643/ && $3 ~/trans/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #3
-awk '$10 ~/ENSG00000001461/ && $3 ~/exon/' Homo_sapiens.GRCh38.83.gtf | wc -l
+awk '$10 ~/ENSG00000113643/ && $3 ~/exon/' Homo_sapiens.GRCh38.83.gtf | wc -l
 #4
-awk '$10 ~/ENSG00000001461/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%s\t%s\t%s\t%s\t%d\n", $13, $14, $17, $18, "length", ($5-$4))}' Homo_sapiens.GRCh38.83.gtf | sort -rnk2 | head -1
+awk '$10 ~/ENSG00000113643/ && $3 ~/exon/ {gsub(/"|;/, "", $14); gsub(/"|;/, "", $18); printf("%s\t%s\t%s\t%s\t%s\t%d\n", $13, $14, $17, $18, "length", ($5-$4))}' Homo_sapiens.GRCh38.83.gtf | sort -rnk2 | head -1
 #5
 awk '$2 ~/^havana$/ && $3 ~/transcript/ {gsub(/"|;/, "", $14); print $14}' Homo_sapiens.GRCh38.83.gtf > havana_transcripts.txt
 #6

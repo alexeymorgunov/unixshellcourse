@@ -1,12 +1,12 @@
 # Unix shell course
 
-Hello and welcome to this course! Slightly different versions of this course are being taught to different audiences. Please follow the correct instructions for your session.
+Hello and welcome to this course!
 
 **Part II BBS Bioinformatics** - 15:00-17:00, 14 Jan 2019
 1. We begin by working through the [Orientation](Orientation.md) exercise. You can either copy what I am doing on the screen or work through it faster on your own. Refer to [Notes](Notes1.md) for some explanations and further examples.
-2. Attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises are available but please only check them once you have given the exercises a proper try. I will be walking around the room if you have any questions.
+2. Attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises are available but please only check them once you have given the exercises a fair try. I will be walking around the room if you have any questions.
 
-Part 2 of the course is optional, you're welcome to complete it at home.
+Part 2 of the course is optional, you're welcome to continue with it after finishing Part 1, or to complete it at home.
 ---
 ## Introduction to Unix shell - Part 1
 

@@ -56,7 +56,7 @@ case $rental in
    "van") echo "For $rental £50 per day";;
    "jeep") echo "For $rental £60 per day";;
    "bicycle") echo "For $rental £7 per day";;
-   *) echo "Sorry, I can not get a $rental for you";;
+   *) echo "Sorry, I cannot get a $rental for you";;
 esac
 ```
 

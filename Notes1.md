@@ -52,6 +52,7 @@ pwd #print working directory
 cd [folder] #change directory into folder
 cd ~ #change to home folder
 cd .. #move up a directory
+cd - #change to previously accessed directory
 ```
 
 Working with files and directories:
@@ -110,7 +111,7 @@ less [file] #one page at a time, space for next, (q)uit
 gedit [file] #open text editor, also 'emacs', 'vi'
 head -N [file] #display top N lines of file
 tail -N [file] #display bottom N lines of file
-tail -n +N [file] #display all lines to the end after N lines from the top
+tail -n +N [file] #display all lines to the end starting with the Nth line
 wc [file] #word, line, character and byte count
 ```
 
@@ -172,7 +173,7 @@ This is only the simplest and arguably the most useful usage case. There is much
 ---
 ### Redirection & Pipes
 
-To take keyboard input and put it into a file, we can use `cat > file1.txt`. Type as many lines as you like to put into the text file (press `<Enter>` to start a new line) and when done finish with `<CTRL+D>`.
+To take keyboard input and put it into a file, we can use `cat > file1.txt`. Type as many lines as you like (press `<Enter>` to start a new line) and when done finish with `<CTRL+D>`.
 
 To load the contents of the file, use `cat file1.txt`. To append the contents, e.g. taking contents of a different file `file2.txt` and adding them to the end of `file1.txt`, use `cat file2.txt >> file1.txt`.
 
@@ -206,7 +207,7 @@ mouse$ #only at the end of line
 * *Single quotes* - '...' - quote everything inside them as is, no need for escape characters.
 * *Backticks* - \`...\` - work as command substitution.
 * *Double quotes* - "..." - preserve everything except variables and backquoted expressions.
-* *Single parentheses* - (...) - used as command substitution.
+* *Single parentheses* - (...) - are used as command substitution.
 * *Double parentheses* - ((...)) - are used for arithmetic operations.
 * *Braces* - {...} - are used for parameter expansion, and also to identify variables unambiguously (among other things).
 * *Brackets* - [...] - are a bit more complicated. *Single brackets* - [...] - use builtin simple test evaluation, while *Double brackets* - [[...]] - are more modern and generally more compatible but not all shells have them. See [Shell scripting](Notes2.md#shell-scripting) for more examples and [here](http://stackoverflow.com/questions/2188199/how-to-use-double-or-single-bracket-parentheses-curly-braces) and [here](http://serverfault.com/questions/52034/what-is-the-difference-between-double-and-single-square-brackets-in-bash) for some discussion.
