@@ -14,8 +14,8 @@ Download and unpack the [`text files`](exercises/text_files.zip) and the [`human
 
 1. How many genes are there in the [`reference genome`](exercises/Homo_sapiens.GRCh38.83.gtf.gz)? Don't forget to unpack the file.
   ```bash
-cut -f3  Homo_sapiens.GRCh38.83.gtf | grep -c gene
-cut -f3  Homo_sapiens.GRCh38.83.gtf | sort | uniq -c #alternative
+tail -n +6  Homo_sapiens.GRCh38.83.gtf | cut -f3 | grep -c gene
+tail -n +6  Homo_sapiens.GRCh38.83.gtf | cut -f3 | sort | uniq -c #alternative
 ```
 
 2. How many transcripts does your favourite gene have, e.g. ENSG00000113643?
