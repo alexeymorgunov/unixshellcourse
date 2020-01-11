@@ -2,7 +2,7 @@
 
 Hello and welcome to this course!
 
-**Part II BBS Bioinformatics** - 15:00-17:00, 14 Jan 2019
+**Part II BBS Bioinformatics** - 15:00-17:00, 13 Jan 2020
 1. We begin by working through the [Orientation](Orientation.md) exercise. You can either copy what I am doing on the screen or work through it faster on your own. Refer to [Notes](Notes1.md) for some explanations and further examples.
 2. Attempt the [Exercises](Exercises1.md). [Answers](Answers1.md) to exercises are available but please only check them once you have given the exercises a fair try. I will be walking around the room if you have any questions.
 
@@ -35,6 +35,3 @@ Many of the shell scripting exercises are taken from [Linux Shell Scripting Tuto
 
 This material is released under a
 [CC-BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/) ![license](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png).
-
----
-This is the part where I'd love to link to my personal website, but it is still work in progress, so for now I'll just leave a link to the [verb conjugation resource in many languages](http://cooljugator.com) that I built together with a friend over the past year. Lots of shell scripting was used in the process of building it, and I actually used my own course notes as reference all the time!:D
