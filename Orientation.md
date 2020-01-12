@@ -22,7 +22,7 @@ cd -
 cd .
 ```
 
-Come back to some cosy home directory where you can play around without wreaking havoc on your computer. N.B. The commands in this section are listed in the order of suggested execution. Make sure you understand what is happening in each line and can answer the questions!
+Come back to some cosy directory where you can play around without wreaking havoc on your computer. N.B. The commands in this section are listed in the order of suggested execution. Make sure you understand what is happening in each line and can answer the questions!
 
 ```bash
 mkdir sandbox
